@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Characters.MonsterTemplates;
 using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
@@ -57,6 +58,44 @@ public class CharacterStats : MonoBehaviour
         Speed = calcer.GetSpeed(Level);
     }
 
+    public void Setup(MonsterData monsterData)
+    {
+        CharacterClass = CharacterClass.Classless;
+        name = monsterData.name;
+        Hp = monsterData.hp;
+        CurrentHp = Hp;
+        Mana = monsterData.mana;
+        CurrentMana = Mana;
+
+        Level = monsterData.level;
+
+        Attack = monsterData.attack;
+        Defense = monsterData.defense;
+        Speed = monsterData.speed;
+
+        Exp = monsterData.exp;
+    }
+
+    public void SetClass(CharacterClass characterClass)
+    {
+        CharacterClass = characterClass;
+        switch (CharacterClass)
+        {
+            case CharacterClass.Warrior:
+                name = "Cecil";
+                break;
+            case CharacterClass.Wizard:
+                name = "Laura";
+                break;
+            case CharacterClass.Cleric:
+                name = "Vestele";
+                break;
+            case CharacterClass.Rogue:
+                name = "Rick";
+                break;
+                
+        }
+    }
 }
 
 public enum CharacterClass
