@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6f76a1f872345e94eb8dc1a5217731a0
   - enabled: 1
-    path: Assets/Scenes/BasicScene.unity
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/EncounterTester.unity
+    guid: 6c51da5ae28dd8f4bab1165eb75df94b
