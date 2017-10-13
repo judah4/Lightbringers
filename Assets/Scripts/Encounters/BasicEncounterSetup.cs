@@ -36,8 +36,8 @@ namespace Assets.Scripts.Encounters
             monsterChar.SetClass(characterClass);
             Players.Add(monsterChar);
 
-            monsterChar.transform.position = new Vector3(5 +(position)*-.25f,.5f, (position)*2);
-            monsterChar.transform.eulerAngles = new Vector3(0, -90, 0);
+            monsterChar.transform.position = new Vector3(-5 +(position)*-.25f,.5f, (position)*2);
+            monsterChar.transform.eulerAngles = new Vector3(0, 90, 0);
         }
 
         void SpawnEncounter()
@@ -55,8 +55,8 @@ namespace Assets.Scripts.Encounters
                     monsterChar.Setup(monsterData);
                     Monsters.Add(monsterChar);
 
-                    monsterChar.transform.position = new Vector3(-5 +(cnt+monsCnt)*.25f,.5f, (cnt+monsCnt)*2);
-                    monsterChar.transform.eulerAngles = new Vector3(0, 90, 0);
+                    monsterChar.transform.position = new Vector3(5 +(cnt+monsCnt)*.25f,.5f, (cnt+monsCnt)*2);
+                    monsterChar.transform.eulerAngles = new Vector3(0, -90, 0);
 
                 }
             }
