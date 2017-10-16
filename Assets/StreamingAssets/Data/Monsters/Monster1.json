@@ -1,5 +1,11 @@
 {
-  "name": "Tester",
-  "level": 1,
-  "hp": 5
+	"name": "Tester",
+	"level": 1,
+	"hp": 5,
+	"mana" :2,
+	"attack" : 5,
+	"defense" : 1,
+	"speed" :2,
+	"level" : 1,
+	"exp" : 10
 }

@@ -24,6 +24,9 @@ public class CharacterStats : MonoBehaviour
     public CharacterClass CharacterClass = CharacterClass.Classless;
     private CharacterClass characterClassChange = CharacterClass.Classless;
 
+    public bool Player = false;
+    public bool Dead {get { return CurrentHp < 0; }}
+
     public void Start()
     {
         CalcStats();

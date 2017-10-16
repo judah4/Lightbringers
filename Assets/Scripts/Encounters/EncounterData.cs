@@ -8,11 +8,18 @@ namespace Assets.Scripts.Encounters
     [Serializable]
     public class EncounterData
     {
-        public List<EncounterMonsterData> monsters;
+        public EncounterMonsterData monsters;
     }
+
 
     [Serializable]
     public class EncounterMonsterData
+    {
+        public List<MonsterLaneData> frontLane;
+       public List<MonsterLaneData> backLane;
+    }
+     [Serializable]
+    public class MonsterLaneData
     {
         public int id;
         public int count;
