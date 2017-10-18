@@ -66,10 +66,11 @@ namespace Assets.Scripts.Encounters.States
             //D = A - (0.5*Max(1, Def/Atk))
 
 
-            var damage = character.Attack - (0.5*Mathf.Max(1, target.Defense/character.Attack));
+            var damageRaw = character.Attack - (0.5f*Mathf.Max(1, target.Defense/character.Attack));
+            var damage = Mathf.Max(1,Mathf.RoundToInt(damageRaw));
             target.CurrentHp -= (int)damage;
 
-            Debug.Log("Dealt Damage: " + damage + " to " +target.name + " dead: " + target.Dead);
+            Debug.Log("Dealt Damage: " + damage + "("+damageRaw+ ") to " +target.name + " dead: " + target.Dead);
 
             if (target.Dead)
             {
