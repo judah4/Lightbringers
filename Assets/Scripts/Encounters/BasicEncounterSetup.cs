@@ -50,14 +50,23 @@ namespace Assets.Scripts.Encounters
 
         void Update()
         {
+            
             if (EncounterState == EncounterStates.Play)
             {
                 if (CharacterTurn.IsPlayer == false)
                 {
-                    bool attackMonster = false;
-                    var pos = PickTargetPosition(attackMonster);
-                    Debug.Log("Player: " + CharacterTurn.Character.name + "attacking position: " + pos);
-                    CharacterTurn.Attack(pos, attackMonster);
+                    if (CharacterTurn.State == CharacterTurn.TurnState.Choose)
+                    {
+                        bool attackMonster = false;
+                        var pos = PickTargetPosition(attackMonster);
+                        Debug.Log("Monster: " + CharacterTurn.Character.name + " attacking position: " + pos);
+                        CharacterTurn.Attack(pos, attackMonster);
+                    }
+                }
+
+                if (CharacterTurn.State == CharacterTurn.TurnState.End)
+                {
+                    NextTurn();
                 }
             }
         }
@@ -194,6 +203,22 @@ namespace Assets.Scripts.Encounters
                 }
             }
             return 0;
+        }
+
+        public void CleanTurnOrders()
+        {
+            int cnt = 0;
+            while (cnt < TurnOrders.Count)
+            {
+                if (TurnOrders[cnt].Dead)
+                {
+                    TurnOrders.RemoveAt(cnt);
+                    continue;
+                }
+                cnt++;
+            }
+
+
         }
     }
 }

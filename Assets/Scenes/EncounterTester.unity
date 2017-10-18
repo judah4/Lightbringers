@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692bfa7893a9fdd46a4508417eb29b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EncounterId: 2
+  EncounterId: 1
   Monsters: []
   Players: []
   TurnOrders: []

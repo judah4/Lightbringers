@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,19 @@ namespace Assets.Scripts.Encounters.States
         private BasicEncounterSetup _encounter;
         private CharacterStats _character;
 
+        public enum TurnState
+        {
+            Choose,
+            Action,
+            End
+        }
+
+        private TurnState _turnState = TurnState.Choose;
+
+        public TurnState State {get { return _turnState; }}
         public CharacterStats Character {get { return _character; }}
 
-        public bool IsPlayer  {get {return _character.Player == false;}}
-        public bool Waiting {get { return IsPlayer; }}
+        public bool IsPlayer  {get { return _character.Player; }}
 
         public CharacterTurn(BasicEncounterSetup encounter, CharacterStats character)
         {
@@ -24,13 +34,27 @@ namespace Assets.Scripts.Encounters.States
 
         public void Attack(int position, bool attackMonster)
         {
+            _turnState = TurnState.Action;
+            CharacterStats target;
             if (attackMonster)
             {
-                 var target =_encounter.Monsters[position];
-                DealDamage(_character, target);
+                 target =_encounter.Monsters[position];
+                
             }
+            else
+            {
+                target =_encounter.Players[position];
+            }
+            DealDamage(_character, target);
             //wait for animations...
-            _encounter.NextTurn();
+            _encounter.StartCoroutine(AnimationTimer());
+        }
+
+        IEnumerator AnimationTimer()
+        {
+            
+            yield return new WaitForSeconds(1.1f);
+            _turnState = TurnState.End;
         }
 
         private void DealDamage(CharacterStats character, CharacterStats target)
@@ -46,6 +70,11 @@ namespace Assets.Scripts.Encounters.States
             target.CurrentHp -= (int)damage;
 
             Debug.Log("Dealt Damage: " + damage + " to " +target.name + " dead: " + target.Dead);
+
+            if (target.Dead)
+            {
+                _encounter.CleanTurnOrders();
+            }
 
         }
     }

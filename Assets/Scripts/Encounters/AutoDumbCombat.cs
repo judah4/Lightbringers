@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.Encounters.States;
 using UnityEngine;
 
 namespace Assets.Scripts.Encounters
@@ -20,10 +21,10 @@ namespace Assets.Scripts.Encounters
         void Update () {
             if (Encounter.EncounterState == BasicEncounterSetup.EncounterStates.Play)
             {
-                if (Encounter.CharacterTurn.IsPlayer)
+                if (Encounter.CharacterTurn.IsPlayer && Encounter.CharacterTurn.State == CharacterTurn.TurnState.Choose)
                 {
                     var pos = Encounter.PickTargetPosition(true);
-                    Debug.Log("Player: " + Encounter.CharacterTurn.Character.name + "attacking position: " + pos);
+                    Debug.Log("Player: " + Encounter.CharacterTurn.Character.name + " attacking position: " + pos);
                     Encounter.CharacterTurn.Attack(pos, true);
                 }
             }
