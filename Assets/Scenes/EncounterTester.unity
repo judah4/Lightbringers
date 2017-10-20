@@ -206,6 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 768835261}
   - component: {fileID: 768835262}
+  - component: {fileID: 768835263}
   m_Layer: 0
   m_Name: EncounterSetup
   m_TagString: Untagged
@@ -240,6 +241,21 @@ MonoBehaviour:
   EncounterId: 1
   Monsters: []
   Players: []
+  TurnOrders: []
+  EncounterState: 0
+  BeginTime: 3
+--- !u!114 &768835263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768835260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14abfe59585e17f48ae3126166216cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Encounter: {fileID: 0}
 --- !u!1 &1623182124
 GameObject:
   m_ObjectHideFlags: 0

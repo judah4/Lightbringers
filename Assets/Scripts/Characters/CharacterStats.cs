@@ -24,6 +24,9 @@ public class CharacterStats : MonoBehaviour
     public CharacterClass CharacterClass = CharacterClass.Classless;
     private CharacterClass characterClassChange = CharacterClass.Classless;
 
+    public bool Player = false;
+    public bool Dead {get { return CurrentHp < 1; }}
+
     public void Start()
     {
         CalcStats();
@@ -52,7 +55,9 @@ public class CharacterStats : MonoBehaviour
         var calcer = new StatCalcer(CharacterClass);
 
         Hp = calcer.GetHp(Level);
+        CurrentHp = Hp;
         Mana = calcer.GetMana(Level);
+        CurrentMana = Mana;
         Attack = calcer.GetAttack(Level);
         Defense = calcer.GetDefense(Level);
         Speed = calcer.GetSpeed(Level);
@@ -95,6 +100,8 @@ public class CharacterStats : MonoBehaviour
                 break;
                 
         }
+
+        CalcStats();
     }
 }
 
