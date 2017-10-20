@@ -220,5 +220,14 @@ namespace Assets.Scripts.Encounters
 
 
         }
+
+        public void Attack(int posIndex)
+        {
+            if (CharacterTurn.IsPlayer && CharacterTurn.State == CharacterTurn.TurnState.Choose)
+                {
+                    Debug.Log("Player: " + CharacterTurn.Character.name + " attacking position: " + posIndex);
+                    CharacterTurn.Attack(posIndex, true);
+                }
+        }
     }
 }
