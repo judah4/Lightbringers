@@ -91,10 +91,12 @@ namespace Assets.Scripts.Encounters
 
         void SpawnPlayer(CharacterClass characterClass, int position)
         {
-            var monstergm = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+            var monstergm = new GameObject("Mon");
             var monsterChar = monstergm.AddComponent<CharacterStats>();
             monsterChar.SetClass(characterClass);
             monsterChar.Player = true;
+            monsterChar.CharacterVisual = monstergm.AddComponent<CharacterVisual>();
+            monsterChar.CharacterVisual.LoadPrimitive(PrimitiveType.Capsule);
             Players.Add(monsterChar);
 
             monsterChar.transform.position = new Vector3(-5 +(position)*-.25f,.5f, (position)*2);
@@ -118,9 +120,11 @@ namespace Assets.Scripts.Encounters
                 {
                     //spawn
                     var monsterData = MonsterLoader.LoadEncounterData(encounterMonster.id);
-                    var monstergm = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    var monstergm = new GameObject("Mon");
                     var monsterChar = monstergm.AddComponent<CharacterStats>();
                     monsterChar.Setup(monsterData);
+                    monsterChar.CharacterVisual = monstergm.AddComponent<CharacterVisual>();
+                    monsterChar.CharacterVisual.LoadPrimitive(PrimitiveType.Cube);
                     Monsters.Add(monsterChar);
 
                     monsterChar.transform.position = new Vector3(5 +(cnt+monsCnt)*.25f + laneOffset,.5f, (cnt+monsCnt)*2);
