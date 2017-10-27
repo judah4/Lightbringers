@@ -71,6 +71,7 @@ namespace Assets.Scripts.Encounters
                     NextTurn();
                 }
             }
+
         }
 
         IEnumerator BeginTimer()
