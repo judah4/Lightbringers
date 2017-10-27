@@ -15,6 +15,9 @@ namespace Assets.Scripts.UI
         public List<Text> Names;
         public Text TopName;
 
+        public GameObject AttackPanel;
+        public GameObject ActionsPanel;
+
         // Use this for initialization
         void Start () {
             for (int cnt = 0; cnt < encounter.Players.Count; cnt++)
@@ -23,6 +26,12 @@ namespace Assets.Scripts.UI
                 Names[cnt].text = player.name;
                 HealthBars[cnt].SetHealth(player.CurrentHp, player.Hp);
             }
+
+            encounter.OnTurn += () =>
+            {
+                AttackPanel.SetActive(false);
+                ActionsPanel.SetActive(true);
+            };
         }
 	
         // Update is called once per frame

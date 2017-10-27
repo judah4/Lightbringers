@@ -600,6 +600,8 @@ MonoBehaviour:
   - {fileID: 2116109700}
   - {fileID: 912657857}
   TopName: {fileID: 1855893431}
+  AttackPanel: {fileID: 1121666646}
+  ActionsPanel: {fileID: 1973918560}
 --- !u!1 &221724895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.008248703, y: 0.06760252}
   m_AnchorMax: {x: 0.1797461, y: 0.24239928}
-  m_AnchoredPosition: {x: -0.4487915, y: -0.6999855}
+  m_AnchoredPosition: {x: -0.4487915, y: -0.6999893}
   m_SizeDelta: {x: 62.497528, y: 11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &912657857
@@ -2483,6 +2485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541182923}
   - component: {fileID: 1541182922}
+  - component: {fileID: 1541182924}
   m_Layer: 0
   m_Name: EncounterSetup (1)
   m_TagString: Untagged
@@ -2520,6 +2523,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541182924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541182921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b731dcde50ee94688711f479e4bd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Town Battle
 --- !u!1 &1685217851
 GameObject:
   m_ObjectHideFlags: 0

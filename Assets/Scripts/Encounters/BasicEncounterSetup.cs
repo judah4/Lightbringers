@@ -33,6 +33,8 @@ namespace Assets.Scripts.Encounters
         public EncounterStates EncounterState = EncounterStates.Begin;
         public float BeginTime = 3;
 
+        public event Action OnTurn;
+
         public void Awake()
         {
             SpawnPlayers();
@@ -148,6 +150,11 @@ namespace Assets.Scripts.Encounters
             }
             var charTurn = TurnOrders[0];
             CharacterTurn = new CharacterTurn(this, charTurn);
+
+            if (OnTurn != null)
+            {
+                OnTurn();
+            }
 
         }
 
