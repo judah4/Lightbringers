@@ -29,15 +29,15 @@ public class CharacterController : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        //turns off cursor so it is not seen during gameplay
         rb = GetComponent<Rigidbody>();
         me = GetComponent<Mesh>();
         print(me);
         jump = new Vector3(0.0f, 2.0f, 0.0f);
         source = GetComponent<AudioSource>();
         Time.timeScale = 1;
+
         PauseMenu.gameObject.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked; //locks mouse so it's not in the way
     }
 
     void OnCollisionStay() //If object collides with something, it is grounded
@@ -78,7 +78,8 @@ public class CharacterController : MonoBehaviour {
             isGrounded = false;
             isGrounded = false;
         }
-        /*
+
+        
         if (Input.GetButtonUp("Pause")) //unlocks mouse after pressing escape key
         {
             if (PauseMenu.gameObject.activeInHierarchy == false)
@@ -98,22 +99,7 @@ public class CharacterController : MonoBehaviour {
             }
 
         }
-        */
-
-
-
     }
-
-
-    void OnTriggerEnter(Collider other) //Called when object touches trigger collider
-    {
-        print("checkpoint");
-        if (other.gameObject.CompareTag("CP")) //if object has pickup tag
-        {
-            other.gameObject.SetActive(false); //deactivates object            
-        }
-    }
-
 
 
     private void FixedUpdate()

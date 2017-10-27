@@ -16,21 +16,20 @@ public class PauseButtons : MonoBehaviour {
 
     public void Restart(string SceneName)
     {
-        SceneManager.LoadScene(SceneName);
-        print("Active scene is '" + SceneName + "'.");
+        //SceneManager.LoadScene(SceneName);
+        print("Tried to restart " + SceneName + ".");
         Time.timeScale = 1;
     }
 
     public void GoToMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        //SceneManager.LoadScene("Main Menu");
         print(("tried to switch to " + "SceneName"));
     }
 
-
-
     public void ExitGame()
     {
+        //add function to quicksave the game
         Application.Quit();
     }
 }
