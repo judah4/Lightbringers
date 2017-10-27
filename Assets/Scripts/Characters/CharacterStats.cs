@@ -27,6 +27,9 @@ public class CharacterStats : MonoBehaviour
     public bool Player = false;
     public bool Dead {get { return CurrentHp < 1; }}
 
+    [SerializeField]
+    public CharacterVisual CharacterVisual;
+
     public void Start()
     {
         CalcStats();

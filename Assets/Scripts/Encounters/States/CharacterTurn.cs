@@ -74,6 +74,7 @@ namespace Assets.Scripts.Encounters.States
 
             if (target.Dead)
             {
+                target.CharacterVisual.Dead();
                 _encounter.CleanTurnOrders();
             }
 
