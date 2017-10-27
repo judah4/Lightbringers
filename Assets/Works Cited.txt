@@ -1,0 +1,31 @@
+﻿Works Cited:
+
+How to construct a simple First Person Controller with Camera Mouse Look in Unity 5
+https://www.youtube.com/watch?v=blO039OzUZc
+
+Can someone help me make a simple jump script?
+http://answers.unity3d.com/questions/1020197/can-someone-help-me-make-a-simple-jump-script.html
+
+[help]How to move an object left and right (looping)
+http://answers.unity3d.com/questions/754633/how-to-move-an-object-left-and-righ-looping.html
+
+How to access a variable from another script in Unity c#
+https://gamedev.stackexchange.com/questions/118534/how-to-access-a-variable-from-another-script-in-unity-c
+
+C# - Switch Statement
+https://www.tutorialspoint.com/csharp/switch_statement_in_csharp.htm
+
+Making a Simple Game in Unity - Playing Sound Effects - Unity C# Tutorial (Part 9)
+https://www.youtube.com/watch?v=u5DaPCiP0Xs
+
+Unity Tutorial: Playing Audio (Music and Sound Effects)
+https://www.youtube.com/watch?v=egxNXuwf0_g
+
+Creating a Start Menu / Main Menu in Unity 5
+https://www.youtube.com/watch?v=FrJogRBSzFo
+
+Unity 5 making a simple pause menu
+https://www.youtube.com/watch?v=PyEmRVRHWL8
+
+Unity Controller Controlled GUI Tutorial
+https://www.youtube.com/watch?v=dkduVooA9tE
