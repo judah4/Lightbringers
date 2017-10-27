@@ -13,16 +13,26 @@ public class Health : MonoBehaviour {
     {
 		
 	}
+
+    public void SetHealth(float hp, float maxHp)
+    {
+        HP = hp;
+        this.maxHP = maxHp;
+        UpdateHP();
+    }
 	
 	// Update is called once per frame
 	private void UpdateHP ()
     {
-        float ratio = HP / maxHP;
+        float ratio = Mathf.Max(0,HP / maxHP);
         bar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        ratioText.text = (ratio * 100).ToString("0") + '%';
-	}
+        if (ratioText != null)
+        {
+            ratioText.text = (ratio * 100).ToString("0") + '%';
+        }
+    }
 
-    private void TakeDamage (float damage)
+    public void TakeDamage (float damage)
     {
         HP -= damage;
         if(HP <0)
@@ -33,7 +43,7 @@ public class Health : MonoBehaviour {
         UpdateHP();
     }
 
-    private void HealDamage(float heal)
+    public void HealDamage(float heal)
     {
         HP += heal;
         if (HP > maxHP)

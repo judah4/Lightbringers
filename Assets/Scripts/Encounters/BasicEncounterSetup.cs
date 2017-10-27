@@ -33,7 +33,7 @@ namespace Assets.Scripts.Encounters
         public EncounterStates EncounterState = EncounterStates.Begin;
         public float BeginTime = 3;
 
-        public void Start()
+        public void Awake()
         {
             SpawnPlayers();
             SpawnEncounter();
