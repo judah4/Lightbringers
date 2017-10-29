@@ -7,6 +7,8 @@ public class CharacterVisual : MonoBehaviour
     [SerializeField]
     private GameObject model;
 
+    public int Id;
+
     //public void LoadPrimitive(PrimitiveType primitive)
     //{
     //    model = GameObject.CreatePrimitive(primitive);
@@ -18,11 +20,7 @@ public class CharacterVisual : MonoBehaviour
 
     public void LoadModel(int id)
     {
-        if (CharacterList.Instance == null)
-        {
-            CharacterList.Instance = Instantiate(Resources.Load<CharacterList>("CharacterList"));
-        }
-
+        Id = id;
         model = CharacterList.Instance.Load(id, transform);
     }
 

@@ -35,6 +35,7 @@ namespace Assets.Scripts.Encounters.States
         public void Attack(int position, bool attackMonster)
         {
             _turnState = TurnState.Action;
+            BattleCryManager.Instance.Load(CharacterClipType.Attack, Character.CharacterVisual.Id, Character.transform.position);
             CharacterStats target;
             if (attackMonster)
             {
@@ -52,7 +53,6 @@ namespace Assets.Scripts.Encounters.States
 
         IEnumerator AnimationTimer()
         {
-            
             yield return new WaitForSeconds(1.1f);
             _turnState = TurnState.End;
         }
