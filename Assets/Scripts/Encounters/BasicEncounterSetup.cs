@@ -30,10 +30,13 @@ namespace Assets.Scripts.Encounters
 
         public CharacterTurn CharacterTurn;
 
-        public EncounterStates EncounterState = EncounterStates.Begin;
+        private EncounterStates _encounterState = EncounterStates.Begin;
+
+        public EncounterStates EncounterState {get { return _encounterState; }}
         public float BeginTime = 3;
 
         public event Action OnTurn;
+        public event Action<EncounterStates> OnEncounterState;
 
         public void Awake()
         {
@@ -74,11 +77,23 @@ namespace Assets.Scripts.Encounters
 
         }
 
+        void ChangeEncounterState(EncounterStates newState)
+        {
+            if (_encounterState != newState)
+            {
+                _encounterState = newState;
+                if (OnEncounterState != null)
+                {
+                    OnEncounterState(_encounterState);
+                }
+            }
+        }
+
         IEnumerator BeginTimer()
         {
             yield return new WaitForSeconds(BeginTime);
 
-            EncounterState = EncounterStates.Play;
+            ChangeEncounterState(EncounterStates.Play);
             StartTurn();
         }
 
@@ -166,12 +181,12 @@ namespace Assets.Scripts.Encounters
             if (AllDead(Players))
             {
                 Debug.Log("Monsters win!");
-                EncounterState = EncounterStates.GameOver;
+                ChangeEncounterState(EncounterStates.GameOver);
             }
             else if (AllDead(Monsters))
             {
                 Debug.Log("Players win!");
-                EncounterState = EncounterStates.Results;
+                ChangeEncounterState(EncounterStates.Results);
             }
             else
             {
