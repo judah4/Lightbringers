@@ -23,6 +23,9 @@ namespace Assets.Scripts.UI
 
         // Use this for initialization
         void Start () {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             for (int cnt = 0; cnt < encounter.Players.Count; cnt++)
             {
                 var player = encounter.Players[cnt];
