@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Assets.Scripts.Encounters;
+using Assets.Scripts.World;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.UI
@@ -32,8 +35,10 @@ namespace Assets.Scripts.UI
                 AttackPanel.SetActive(false);
                 ActionsPanel.SetActive(true);
             };
+
+            encounter.OnEncounterState += Encounter_OnEncounterState;
         }
-	
+
         // Update is called once per frame
         void Update ()
         {
@@ -60,6 +65,20 @@ namespace Assets.Scripts.UI
                 AttackButtons[cnt].gameObject.SetActive(!encounter.Monsters[cnt].Dead);
 
             }
+        }
+
+        private void Encounter_OnEncounterState(BasicEncounterSetup.EncounterStates state)
+        {
+            if (state == BasicEncounterSetup.EncounterStates.Results)
+            {
+                StartCoroutine(ResultsThenLeave());
+            }
+        }
+
+        IEnumerator ResultsThenLeave()
+        {
+            yield return new WaitForSeconds(2);
+            SceneManager.LoadScene(WorldStateManager.Instance.CurrentScene);
         }
     }
 }
