@@ -15,6 +15,7 @@ namespace Assets.Scripts.Characters.MonsterTemplates
             string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, "Data/Monsters/Monster"+monsterId+".json");
             var result = System.IO.File.ReadAllText(filePath);
             var encounter = JsonUtility.FromJson<MonsterData>(result);
+            encounter.id = monsterId;
             return encounter;
         }
     }

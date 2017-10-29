@@ -2,13 +2,13 @@
   "monsters": {
 		"frontLane": [
 		{
-		  "id": 1,
+		  "id": 5,
 		  "count": 2
 		}
 		],
 		"backLane": [
 		{
-		  "id": 2,
+		  "id": 6,
 		  "count": 1
 		}
 		]

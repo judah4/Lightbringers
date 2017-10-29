@@ -108,15 +108,15 @@ namespace Assets.Scripts.Encounters
 
         void SpawnPlayer(CharacterClass characterClass, int position)
         {
-            var monstergm = new GameObject("Mon");
+            var monstergm = new GameObject("Char");
             var monsterChar = monstergm.AddComponent<CharacterStats>();
             monsterChar.SetClass(characterClass);
             monsterChar.Player = true;
             monsterChar.CharacterVisual = monstergm.AddComponent<CharacterVisual>();
-            monsterChar.CharacterVisual.LoadPrimitive(PrimitiveType.Capsule);
+            monsterChar.CharacterVisual.LoadModel((int)characterClass);
             Players.Add(monsterChar);
 
-            monsterChar.transform.position = new Vector3(-5 +(position)*-.25f,.5f, (position)*2);
+            monsterChar.transform.position = new Vector3(-5 +(position)*-.25f,.5f, 4+(position * -2));
             monsterChar.transform.eulerAngles = new Vector3(0, 90, 0);
         }
 
@@ -141,10 +141,10 @@ namespace Assets.Scripts.Encounters
                     var monsterChar = monstergm.AddComponent<CharacterStats>();
                     monsterChar.Setup(monsterData);
                     monsterChar.CharacterVisual = monstergm.AddComponent<CharacterVisual>();
-                    monsterChar.CharacterVisual.LoadPrimitive(PrimitiveType.Cube);
+                    monsterChar.CharacterVisual.LoadModel(monsterData.id);
                     Monsters.Add(monsterChar);
 
-                    monsterChar.transform.position = new Vector3(5 +(cnt+monsCnt)*.25f + laneOffset,.5f, (cnt+monsCnt)*2);
+                    monsterChar.transform.position = new Vector3(5 +(cnt+monsCnt)*.25f + laneOffset,.5f, 3 + (cnt+monsCnt)*-2);
                     monsterChar.transform.eulerAngles = new Vector3(0, -90, 0);
 
                 }

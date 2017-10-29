@@ -108,6 +108,48 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &197603808
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083023040613722, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fa227cc762e49954bb7a0d33ddc74429, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &399045856
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 36.645, y: 0, z: 0}
 --- !u!1 &768835260
 GameObject:
@@ -225,7 +267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &768835262
 MonoBehaviour:
@@ -242,7 +284,6 @@ MonoBehaviour:
   Monsters: []
   Players: []
   TurnOrders: []
-  EncounterState: 0
   BeginTime: 3
 --- !u!114 &768835263
 MonoBehaviour:
@@ -319,5 +360,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}

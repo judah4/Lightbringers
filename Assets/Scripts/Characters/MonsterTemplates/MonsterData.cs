@@ -7,6 +7,7 @@ namespace Assets.Scripts.Characters.MonsterTemplates
 {
     public class MonsterData
     {
+        public int id;
         public string name = "Heratio";
         public int hp = 10;
         public int mana = 2;
