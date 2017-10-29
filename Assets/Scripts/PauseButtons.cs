@@ -23,7 +23,7 @@ public class PauseButtons : MonoBehaviour {
 
     public void GoToMenu()
     {
-        //SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
         print(("tried to switch to " + "SceneName"));
     }
 
