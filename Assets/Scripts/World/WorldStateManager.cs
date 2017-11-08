@@ -21,6 +21,8 @@ namespace Assets.Scripts.World
         public bool positionSet = false;
 
         public List<CharacterStat> CharactereStats = new List<CharacterStat>();
+
+        public List<int> MonsterIds = new List<int>();
         
         public void SetPosition(Vector3 position)
         {
@@ -31,6 +33,12 @@ namespace Assets.Scripts.World
 
         public void RecordCurrentWorldScene()
         {
+            if(string.IsNullOrEmpty(CurrentScene))
+            {
+                CurrentScene = "Leeside Village";
+            }
+
+
             var nextScene = SceneManager.GetActiveScene().name;
             if(CurrentScene != nextScene)
             {

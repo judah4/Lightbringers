@@ -68,7 +68,7 @@ namespace Assets.Scripts.Encounters.States
 
             var damageRaw = character.Attack - (0.5f*Mathf.Max(1, target.Defense/character.Attack));
             var damage = Mathf.Max(1,Mathf.RoundToInt(damageRaw));
-            target.CurrentHp -= (int)damage;
+            target.Damage((int)damage);
 
             Debug.Log("Dealt Damage: " + damage + "("+damageRaw+ ") to " +target.name + " dead: " + target.Dead);
 

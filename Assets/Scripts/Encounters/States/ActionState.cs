@@ -13,7 +13,7 @@ namespace Assets.Scripts.Encounters.States
 
         public void Process()
         {
-            Target.CurrentHp -= Attacker.Attack;
+            Target.Damage(Attacker.Attack);
             OnDamage();
             if (Target.CurrentHp < 0)
             {

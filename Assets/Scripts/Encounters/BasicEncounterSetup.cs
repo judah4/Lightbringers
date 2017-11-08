@@ -106,11 +106,24 @@ namespace Assets.Scripts.Encounters
             SpawnPlayer(CharacterClass.Wizard, pos++);
             SpawnPlayer(CharacterClass.Cleric, pos++);
             SpawnPlayer(CharacterClass.Rogue, pos);
+
+            OnEncounterState += (state) =>
+            {
+                if(state != EncounterStates.Results)
+                    return;
+
+                for(int cnt = 0; cnt < Players.Count; cnt++)
+                {
+                     Players[cnt].GiveExp(60);
+                }
+
+            };
         }
 
         void SpawnPlayer(CharacterClass characterClass, int position)
         {
-            if(WorldStateManager.Instance.CharactereStats.Count > position)
+            Debug.Log("Player Pos " + position);
+            if(position >= WorldStateManager.Instance.CharactereStats.Count)
             {
                 WorldStateManager.Instance.CharactereStats.Add(new CharacterStat());
             }
@@ -141,7 +154,17 @@ namespace Assets.Scripts.Encounters
 
             monsterChar.Hp = stats.Health;
             monsterChar.Mana = stats.Mana;
+            monsterChar.Exp = stats.Exp;
 
+            monsterChar.OnHealthChange += (health) => {
+                stats.Health = health;
+            };
+             monsterChar.OnLevel += (level) => {
+                stats.Level = level;
+            };
+             monsterChar.OnExp += (exp, earned) => {
+                stats.Exp = exp;
+            };
 
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Assets.Scripts.Characters.MonsterTemplates;
 using UnityEngine;
+using System;
 
 public class CharacterStats : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class CharacterStats : MonoBehaviour
     public int Level = 1;
     private int levelChange = 1;
     public int Exp = 0;
-    public int ExpNeeded = 500;
+    public int ExpNeeded = 100;
 
     public CharacterClass CharacterClass = CharacterClass.Classless;
     private CharacterClass characterClassChange = CharacterClass.Classless;
@@ -30,6 +31,10 @@ public class CharacterStats : MonoBehaviour
     [SerializeField]
     public CharacterVisual CharacterVisual;
 
+    public event Action<int> OnHealthChange;
+    public event Action<int> OnManaChange;
+    public event Action<int, int> OnExp;
+    public event Action<int> OnLevel;
     public void Start()
     {
         CalcStats();
@@ -50,6 +55,16 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
+    void SetLevel(int newLevel)
+    {
+        Level = newLevel;
+        CalcStats();
+        if(OnLevel != null)
+        {
+            OnLevel(Level);
+        }
+    }
+
     void CalcStats()
     {
         if(CharacterClass == CharacterClass.Classless)
@@ -64,6 +79,12 @@ public class CharacterStats : MonoBehaviour
         Attack = calcer.GetAttack(Level);
         Defense = calcer.GetDefense(Level);
         Speed = calcer.GetSpeed(Level);
+        ExpNeeded = ExpNeededCalc(Level);
+
+        if(OnHealthChange != null)
+        {
+            OnHealthChange(CurrentHp);
+        }
     }
 
     public void Setup(MonsterData monsterData)
@@ -105,6 +126,41 @@ public class CharacterStats : MonoBehaviour
         }
 
         CalcStats();
+    }
+
+    public void Damage(int damage)
+    {
+        CurrentHp -= damage;
+        if(OnHealthChange != null)
+        {
+            OnHealthChange(CurrentHp);
+        }
+    }
+
+    public void GiveExp(int earned)
+    {
+        Exp += earned;
+        if(OnExp != null)
+        {
+            OnExp(Exp, earned);
+        }
+
+        if(Exp >= ExpNeeded)
+        {
+            SetLevel(Level+1);
+            
+
+            Exp -= ExpNeeded;
+            if(OnExp != null)
+            {
+                OnExp(Exp, earned);
+            }
+        }
+    }
+
+    public static int ExpNeededCalc(int level)
+    {
+        return level * 100;
     }
 }
 
