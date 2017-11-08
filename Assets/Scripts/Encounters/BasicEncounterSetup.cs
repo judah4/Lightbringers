@@ -152,8 +152,8 @@ namespace Assets.Scripts.Encounters
                 stats.Mana = monsterChar.Mana;
             }
 
-            monsterChar.Hp = stats.Health;
-            monsterChar.Mana = stats.Mana;
+            monsterChar.CurrentHp = stats.Health;
+            monsterChar.CurrentMana = stats.Mana;
             monsterChar.Exp = stats.Exp;
 
             monsterChar.OnHealthChange += (health) => {
