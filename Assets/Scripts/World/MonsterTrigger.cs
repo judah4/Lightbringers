@@ -12,6 +12,7 @@ namespace Assets.Scripts.World
         public float EndSize = 1.02f;
         public SphereCollider Collider;
         public int Id = 0;
+        public int EncounterId = 1;
 
         public void Awake()
         {
@@ -33,6 +34,7 @@ namespace Assets.Scripts.World
             {
                 VoiceManager.Instance.TriggerVoice();
                 WorldStateManager.Instance.MonsterIds.Add(Id);
+                WorldStateManager.Instance.EncounterId = EncounterId;
                 SceneManager.LoadScene("BattleInterface");
             }
         }

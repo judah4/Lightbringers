@@ -40,6 +40,7 @@ namespace Assets.Scripts.Encounters
 
         public void Awake()
         {
+            EncounterId = WorldStateManager.Instance.EncounterId;
             SpawnPlayers();
             SpawnEncounter();
             
@@ -112,9 +113,15 @@ namespace Assets.Scripts.Encounters
                 if(state != EncounterStates.Results)
                     return;
 
+                var totalExp = 0;
+                for(int cnt = 0; cnt < Monsters.Count; cnt++)
+                {
+                    totalExp += Monsters[cnt].Exp;
+                }
+
                 for(int cnt = 0; cnt < Players.Count; cnt++)
                 {
-                     Players[cnt].GiveExp(60);
+                     Players[cnt].GiveExp(totalExp);
                 }
 
             };

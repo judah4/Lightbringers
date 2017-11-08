@@ -23,6 +23,7 @@ namespace Assets.Scripts.World
         public List<CharacterStat> CharactereStats = new List<CharacterStat>();
 
         public List<int> MonsterIds = new List<int>();
+        public int EncounterId = 1;
         
         public void SetPosition(Vector3 position)
         {
