@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.World;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,10 +26,14 @@ public class CharacterController : MonoBehaviour {
     public AudioClip[] AudioEffect;
     public AudioSource source;
 
-
     // Use this for initialization
     void Start ()
     {
+        if(WorldStateManager.Instance.positionSet)
+        {
+            transform.position = WorldStateManager.Instance.Position;
+        }
+
         rb = GetComponent<Rigidbody>();
         me = GetComponent<Mesh>();
         print(me);
@@ -48,6 +53,7 @@ public class CharacterController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        WorldStateManager.Instance.SetPosition(transform.position);
         float translation = Input.GetAxis("Vertical") * speed; //gets input forwards and backwards
         float straffe = Input.GetAxis("Horizontal") * speed; //gets input left and right
         translation *= Time.deltaTime; //keeps movements smooth and in time with update

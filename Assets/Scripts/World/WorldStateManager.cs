@@ -16,10 +16,25 @@ namespace Assets.Scripts.World
         } }
 
         public string CurrentScene;
+        public Vector3 Position;
+        public bool positionSet = false;
+        
+        public void SetPosition(Vector3 position)
+        {
+            Position = position;
+            positionSet = true;
+        }
+
 
         public void RecordCurrentWorldScene()
         {
-            CurrentScene = SceneManager.GetActiveScene().name;
+            var nextScene = SceneManager.GetActiveScene().name;
+            if(CurrentScene != nextScene)
+            {
+                CurrentScene = SceneManager.GetActiveScene().name;
+                //changed scene? move to another starting pos
+                positionSet = false;
+            }
         }
 
     }

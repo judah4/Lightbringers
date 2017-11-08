@@ -6,7 +6,8 @@ namespace Assets.Scripts.World
 
         // Use this for initialization
         void Start () {
-            WorldStateManager.Instance.RecordCurrentWorldScene();	
+            WorldStateManager.Instance.RecordCurrentWorldScene();
+            
         }
 	
     }
