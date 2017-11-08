@@ -6,6 +6,7 @@ using System.Text;
 using Assets.Scripts.Characters.MonsterTemplates;
 using Assets.Scripts.Encounters.States;
 using UnityEngine;
+using Assets.Scripts.World;
 
 namespace Assets.Scripts.Encounters
 {
@@ -100,6 +101,7 @@ namespace Assets.Scripts.Encounters
         void SpawnPlayers()
         {
             var pos = 0;
+            
             SpawnPlayer(CharacterClass.Warrior, pos++);
             SpawnPlayer(CharacterClass.Wizard, pos++);
             SpawnPlayer(CharacterClass.Cleric, pos++);
@@ -108,9 +110,18 @@ namespace Assets.Scripts.Encounters
 
         void SpawnPlayer(CharacterClass characterClass, int position)
         {
+            if(WorldStateManager.Instance.CharactereStats.Count > position)
+            {
+                WorldStateManager.Instance.CharactereStats.Add(new CharacterStat());
+            }
+            var stats =  WorldStateManager.Instance.CharactereStats[position];
+
             var monstergm = new GameObject("Char");
             var monsterChar = monstergm.AddComponent<CharacterStats>();
+
+            monsterChar.Level = stats.Level;
             monsterChar.SetClass(characterClass);
+            
             monsterChar.Player = true;
             monsterChar.CharacterVisual = monstergm.AddComponent<CharacterVisual>();
             monsterChar.CharacterVisual.LoadModel((int)characterClass);
@@ -118,6 +129,20 @@ namespace Assets.Scripts.Encounters
 
             monsterChar.transform.position = new Vector3(-5 +(position)*-.25f,.5f, 4+(position * -2));
             monsterChar.transform.eulerAngles = new Vector3(0, 90, 0);
+
+            if(stats.Health > monsterChar.Hp)
+            {
+                stats.Health = monsterChar.Hp;
+            }
+            if(stats.Mana > monsterChar.Mana)
+            {
+                stats.Mana = monsterChar.Mana;
+            }
+
+            monsterChar.Hp = stats.Health;
+            monsterChar.Mana = stats.Mana;
+
+
         }
 
         void SpawnEncounter()

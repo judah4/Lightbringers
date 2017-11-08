@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.World
@@ -18,6 +19,8 @@ namespace Assets.Scripts.World
         public string CurrentScene;
         public Vector3 Position;
         public bool positionSet = false;
+
+        public List<CharacterStat> CharactereStats = new List<CharacterStat>();
         
         public void SetPosition(Vector3 position)
         {
