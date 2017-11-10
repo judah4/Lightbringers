@@ -26,7 +26,13 @@ namespace Assets.Scripts.Encounters
 
         public void Load(CharacterClipType clipType, int id, Vector3 position)
         {
-            
+            if(id >= SoundClips.Count)
+            {
+                Debug.LogWarning("Id " + id + " is not in sound clips. Using default 1");
+                id = 1;
+            }
+
+
             var clips = SoundClips[id];
             var clipList = GetList(clips, clipType);
             AudioClip clip = clipList[Random.Range(0, clipList.Count)];
