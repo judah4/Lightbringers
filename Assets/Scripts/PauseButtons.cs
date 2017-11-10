@@ -27,6 +27,11 @@ public class PauseButtons : MonoBehaviour {
         print(("tried to switch to " + "SceneName"));
     }
 
+	public void GoToInfoMenu()
+	{
+		print("testing");
+	}
+
     public void ExitGame()
     {
 		//add function to quicksave the game
