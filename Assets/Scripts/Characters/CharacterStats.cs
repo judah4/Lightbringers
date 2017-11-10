@@ -4,6 +4,7 @@ using Assets.Scripts.Characters.MonsterTemplates;
 using UnityEngine;
 using System;
 
+[Serializable]
 public class CharacterStats : MonoBehaviour
 {
 
