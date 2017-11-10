@@ -27,9 +27,18 @@ public class PauseButtons : MonoBehaviour {
         print(("tried to switch to " + "SceneName"));
     }
 
+	public void GoToInfoMenu()
+	{
+		print("testing");
+	}
+
     public void ExitGame()
     {
-        //add function to quicksave the game
-        Application.Quit();
-    }
+		//add function to quicksave the game
+#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+#else
+		Application.Quit();
+#endif
+	}
 }
