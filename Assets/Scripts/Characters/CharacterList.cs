@@ -14,14 +14,14 @@ public class CharacterList : MonoBehaviour
         return _instance;
     } }
 
-    public List<GameObject> Characters;
+    public List<AnimatedCharacter> Characters;
 
     public void Awake()
     {
         _instance = this;
     }
 
-    public GameObject Load(int id, Transform parent)
+    public AnimatedCharacter Load(int id, Transform parent)
     {
         var prefab = Characters[id];
         var model = Instantiate(prefab, parent.position, parent.rotation, parent);

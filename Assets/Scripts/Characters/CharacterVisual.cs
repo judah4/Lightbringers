@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterVisual : MonoBehaviour
 {
     [SerializeField]
-    private GameObject model;
+    private AnimatedCharacter model;
 
     public int Id;
 
@@ -26,6 +26,6 @@ public class CharacterVisual : MonoBehaviour
 
     public void Dead()
     {
-        model.SetActive(false);
+        model.Die();
     }
 }

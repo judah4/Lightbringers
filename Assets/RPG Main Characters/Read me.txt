@@ -1,0 +1,25 @@
+---How to check animations---
+1.Open the SampleScene
+2.Click on the play button in the game view
+3.You can see the 18 animation buttons on the left side.
+-Action
+-Attack01
+-Attack02
+-AttackWating
+-Damage
+-Die
+-Fail
+-Idle01
+-Idle02
+-Idle03
+-In
+-Jump
+-Run
+-Sit
+-Skill01
+-Skill02
+-Success
+-Victory
+4.Check the rest of them by hiding, unhiding.
+
+
