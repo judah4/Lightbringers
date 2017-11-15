@@ -31,6 +31,7 @@ public enum AnimationTrigger
     Special1,
     Hit,
     Die,
+    Victory,
 }
 
 

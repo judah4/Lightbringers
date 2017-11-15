@@ -47,12 +47,18 @@ namespace Assets.Scripts.Encounters.States
                 target =_encounter.Players[position];
             }
             DealDamage(_character, target);
+
             //wait for animations...
-            _encounter.StartCoroutine(AnimationTimer());
+            _encounter.StartCoroutine(AnimationTimer(target));
         }
 
-        IEnumerator AnimationTimer()
+        IEnumerator AnimationTimer(CharacterStats target)
         {
+            Character.CharacterVisual.Character.Trigger(AnimationTrigger.Attack);
+            yield return new WaitForSeconds(0.2f);
+
+            target.CharacterVisual.Character.Trigger(AnimationTrigger.Hit);
+
             yield return new WaitForSeconds(1.1f);
             _turnState = TurnState.End;
         }

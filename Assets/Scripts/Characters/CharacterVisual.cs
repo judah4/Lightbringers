@@ -18,6 +18,8 @@ public class CharacterVisual : MonoBehaviour
 
     //}
 
+    public AnimatedCharacter Character {get {return model;}}
+
     public void LoadModel(int id)
     {
         Id = id;
@@ -28,4 +30,6 @@ public class CharacterVisual : MonoBehaviour
     {
         model.Die();
     }
+
+
 }

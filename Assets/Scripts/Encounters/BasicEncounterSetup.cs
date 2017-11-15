@@ -113,6 +113,14 @@ namespace Assets.Scripts.Encounters
                 if(state != EncounterStates.Results)
                     return;
 
+                //change music
+
+                //everyone victory!
+                for(int cnt = 0; cnt < Players.Count; cnt++)
+                {
+                     Players[cnt].CharacterVisual.Character.Trigger(AnimationTrigger.Victory);
+                }
+
                 var totalExp = 0;
                 for(int cnt = 0; cnt < Monsters.Count; cnt++)
                 {
