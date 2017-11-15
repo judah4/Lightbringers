@@ -4,45 +4,37 @@ using UnityEngine;
 
 public class ChangeModel : MonoBehaviour {
 
-    public GameObject modelA;
-    public GameObject modelB;
-    public GameObject modelC;
-
     private int modelNumber;
+
+    [SerializeField]
+    CharacterController characterController;
+    AnimatedCharacter character;
 
 
     void Start()
     {
         modelNumber = 1;
-       // modelA.SetActive(true);
-        modelB.SetActive(false);
-        modelC.SetActive(false);
+
+        character = CharacterList.Instance.Load(modelNumber, transform);
     }
 
     void ModelSwitch()
     {
-        if (modelNumber == 1)
-        {
-            modelA.SetActive(false);
-            modelB.SetActive(true);
-            modelNumber = 2;
-        }
-        else if (modelNumber == 2)
-        {
-            modelB.SetActive(false);
-            modelC.SetActive(true);
-            modelNumber = 3;
-        }
-        else if (modelNumber == 3)
-        {
-            modelC.SetActive(false);
-            modelA.SetActive(true);
-            modelNumber = 1;
-        }
+        modelNumber = modelNumber % 4 + 1;
+        Destroy(character.gameObject);
+        character = CharacterList.Instance.Load(modelNumber, transform);
+
     }
 
     void Update()
     {
+        var vel = characterController.Velocity;
+        vel.y = 0;
+        if(vel.sqrMagnitude >  0.000001)
+        {
+            character.transform.forward = vel;
+        }
+        character.SetMovement(vel.magnitude);
         if (Input.GetButtonDown("Cycle"))
         {
             ModelSwitch();

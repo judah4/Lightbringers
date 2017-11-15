@@ -1887,7 +1887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1938645791254044
 GameObject:
   m_ObjectHideFlags: 1
@@ -2498,7 +2498,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1531076285343266}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 69.35, y: 0, z: 8.57}
+  m_LocalPosition: {x: 0, y: 0, z: -150.9}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4036991735399510}
@@ -4366,9 +4366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182cd7be80ba46d45b417e534210bca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelA: {fileID: 1932034511099754}
-  modelB: {fileID: 1475433686495380}
-  modelC: {fileID: 1469891025919608}
+  characterController: {fileID: 114314373033550970}
 --- !u!114 &114276699240616122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4391,6 +4389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea553d1690cb80641b328df333e5a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _velocity: {x: 0, y: 0, z: 0}
   PauseMenu: {fileID: 0}
   speed: 10
   speedMult: 1.5

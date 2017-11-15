@@ -2998,7 +2998,7 @@ Prefab:
     - target: {fileID: 224558052397848558, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 224265823085497418, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -3018,7 +3018,7 @@ Prefab:
     - target: {fileID: 224265823085497418, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -65
       objectReference: {fileID: 0}
     - target: {fileID: 224704686473088810, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -3038,7 +3038,7 @@ Prefab:
     - target: {fileID: 224704686473088810, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -110
       objectReference: {fileID: 0}
     - target: {fileID: 224920181711559044, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -3058,7 +3058,7 @@ Prefab:
     - target: {fileID: 224920181711559044, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -155
       objectReference: {fileID: 0}
     - target: {fileID: 224012996076674374, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -3078,7 +3078,7 @@ Prefab:
     - target: {fileID: 224012996076674374, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 224753700713061362, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -3098,7 +3098,7 @@ Prefab:
     - target: {fileID: 224753700713061362, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24598a322bbc96a429166d11d5f4fca1, type: 2}

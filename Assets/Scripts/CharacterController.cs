@@ -7,6 +7,11 @@ public class CharacterController : MonoBehaviour {
 
     Rigidbody rb; //rigid body for the player character
     Mesh me; //character mesh
+
+    [SerializeField]
+    Vector3 _velocity;
+    Vector3 lastPos;
+
     public Transform PauseMenu;
 
     //public to allow speed to be changed
@@ -26,6 +31,10 @@ public class CharacterController : MonoBehaviour {
     public AudioClip[] AudioEffect;
     public AudioSource source;
 
+    public Vector3 Velocity {get {return _velocity;}}
+
+    
+
     // Use this for initialization
     void Start ()
     {
@@ -43,6 +52,8 @@ public class CharacterController : MonoBehaviour {
 
         PauseMenu.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked; //locks mouse so it's not in the way
+
+        lastPos = transform.position;
     }
 
     void OnCollisionStay() //If object collides with something, it is grounded
@@ -59,7 +70,9 @@ public class CharacterController : MonoBehaviour {
         translation *= Time.deltaTime; //keeps movements smooth and in time with update
         straffe *= Time.deltaTime; //keeps movements smooth and in time with update
 
-        transform.Translate(straffe /*z-axis*/, 0, translation/*x-axis*/);
+        transform.Translate(new Vector3(straffe /*z-axis*/, 0, translation/*x-axis*/));
+        _velocity = transform.position - lastPos;
+        lastPos = transform.position;
 
         //half speed to crouch or return back to normal after sprint
         if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.LeftShift))
