@@ -306,5 +306,29 @@ namespace Assets.Scripts.Encounters
                     CharacterTurn.Attack(posIndex, true);
                 }
         }
+
+        public void MoveOffenseAction(int posIndex)
+        {
+            if (CharacterTurn == null)
+                return;
+
+            if (CharacterTurn.IsPlayer && CharacterTurn.State == CharacterTurn.TurnState.Choose)
+            {
+                Debug.Log("Player: " + CharacterTurn.Character.name + " attacking position: " + posIndex);
+                CharacterTurn.Attack(posIndex, true);
+            }
+        }
+
+        public void OffenseItem(int posIndex, int itemId)
+        {
+            if (CharacterTurn == null)
+                return;
+
+            if (CharacterTurn.IsPlayer && CharacterTurn.State == CharacterTurn.TurnState.Choose)
+            {
+                Debug.Log("Player: " + CharacterTurn.Character.name + " attacking position: " + posIndex);
+                CharacterTurn.Attack(posIndex, true);
+            }
+        }
     }
 }

@@ -14,6 +14,8 @@ namespace Assets.Scripts.UI
         private BasicEncounterSetup encounter;
 
         public List<Button> AttackButtons;
+        public List<Button> MoveButtons;
+        public List<Button> ItemButtons;
         public List<Health> HealthBars;
         public List<Text> Names;
         public Text TopName;
