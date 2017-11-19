@@ -13,7 +13,7 @@ public class TransitionScript : MonoBehaviour
 
 
 
-    void OnTriggerEnter(Collider other) //while player model is inside the object
+    void OnTriggerStay(Collider other) //while player model is inside the object
     {
         //checks to see that it was the player that is in transition area and not something else
         if (other.CompareTag("Player")) 
@@ -30,6 +30,8 @@ public class TransitionScript : MonoBehaviour
 
                 print(("tried to switch to " + SceneName));
             }
+
+            ContextBox.Instance.ShowText("Go to " + SceneName);
         }
         
     }
