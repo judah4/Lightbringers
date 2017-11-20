@@ -24,7 +24,7 @@ public class TransitionScript : MonoBehaviour
             //insert code here to show UI thing to prompt user to interact
             //interactionUIThing.enabled = true;
 
-            if (Input.GetButton("Submit"))
+            if (Input.GetButton("Submit")|| Input.GetMouseButton(0))
             {
                 SceneManager.LoadScene(SceneName);
 

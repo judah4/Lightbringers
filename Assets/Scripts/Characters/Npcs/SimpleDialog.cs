@@ -32,7 +32,7 @@ public class SimpleDialog : MonoBehaviour {
         }
 
 
-		if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Submit"))
+		if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0))
         {
             DialogBox.Instance.ShowText(text);
         }
