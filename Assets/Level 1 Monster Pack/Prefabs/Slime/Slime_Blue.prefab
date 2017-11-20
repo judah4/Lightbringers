@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012535691032}
   - component: {fileID: 95000010992615658}
+  - component: {fileID: 114207164400091068}
   m_Layer: 0
   m_Name: Slime_Blue
   m_TagString: Untagged
@@ -431,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 1000013175867634}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children:
   - {fileID: 4000011977213630}
   - {fileID: 4000012892423958}
@@ -514,7 +515,7 @@ Animator:
   m_GameObject: {fileID: 1000013175867634}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e607f74860c67814e93c914b710142d5, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a28ecd6c820f3f44ba45c3b0c7c3cc7, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -522,6 +523,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114207164400091068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013175867634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cc5030f00df1a42895fec0ec1a3aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 95000010992615658}
 --- !u!137 &137000012344593156
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
