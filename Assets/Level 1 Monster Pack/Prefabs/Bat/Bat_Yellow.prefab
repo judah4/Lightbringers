@@ -576,6 +576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011762660480}
   - component: {fileID: 95000013319663098}
+  - component: {fileID: 114036652594365022}
   m_Layer: 0
   m_Name: Bat_Yellow
   m_TagString: Untagged
@@ -1297,7 +1298,7 @@ Animator:
   m_GameObject: {fileID: 1000013849561652}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 59afa1f2c595d6343b15e945602e1f8f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f1ab49cd22be3e4a878c2f273175a08, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1305,6 +1306,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114036652594365022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013849561652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cc5030f00df1a42895fec0ec1a3aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 95000013319663098}
 --- !u!137 &137000010031494726
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
