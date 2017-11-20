@@ -23,7 +23,7 @@ namespace Assets.Scripts.Items
             }
         }
 
-        public List<Item> Items = new List<Item>();
+        public List<Item> items = new List<Item>();
 
-    }
+	}
 }

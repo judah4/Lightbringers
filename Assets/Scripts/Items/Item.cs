@@ -7,19 +7,18 @@ using UnityEngine;
 namespace Assets.Scripts.Items
 {
     [Serializable]
-    public class Item : ScriptableObject
+    public class Item
     {
-        public int Id;
-        public int Value;
-        public ItemType ItemType = ItemType.Basic;
+		public string itemName;
+        public int id;
+        public ItemType itemType;
 
     }
 
     public enum ItemType
     {
         Basic = 0,
-        Weapon,
-        Equipment,
-        Potion,
+        Consumable = 1,
+        Equipment = 2
     }
 }
