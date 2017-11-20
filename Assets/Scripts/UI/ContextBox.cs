@@ -44,4 +44,9 @@ public class ContextBox : MonoBehaviour {
         timer = 0.5f;
     }
 
+    public void Hide()
+    {
+        timer = -1;
+    }
+
 }

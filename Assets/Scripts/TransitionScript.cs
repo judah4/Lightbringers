@@ -43,7 +43,7 @@ public class TransitionScript : MonoBehaviour
             print("left change location");
             //hide UI thing for User to interact
             //interactionUIThing.enabled = false;
-
+             ContextBox.Instance.Hide();
         }
     }
 
