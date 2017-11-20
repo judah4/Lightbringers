@@ -71,8 +71,7 @@ public class CharacterController : MonoBehaviour {
         straffe *= Time.deltaTime; //keeps movements smooth and in time with update
 
         transform.Translate(new Vector3(straffe /*z-axis*/, 0, translation/*x-axis*/));
-        _velocity = transform.position - lastPos;
-        lastPos = transform.position;
+        
 
         //half speed to crouch or return back to normal after sprint
         if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.LeftShift))
@@ -123,6 +122,9 @@ public class CharacterController : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        _velocity = transform.position - lastPos;
+        lastPos = transform.position;
+
         //keeps player from going crazy fast
         if (rb.velocity.magnitude > maxSpeed)
         {
