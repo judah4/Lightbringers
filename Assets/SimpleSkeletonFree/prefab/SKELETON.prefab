@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4655139138601034}
   - component: {fileID: 95690985424869934}
-  - component: {fileID: 114242563573807930}
+  - component: {fileID: 114272189311682722}
   m_Layer: 0
   m_Name: SKELETON
   m_TagString: Untagged
@@ -1512,7 +1512,7 @@ Animator:
   m_GameObject: {fileID: 1349150361055734}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a58154c350c4ccf47a6cdad03a8dca1a, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6e092ad3d6b50a14bac692ea833c646a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0e61eb651a3f5d249a6a44d735fd3ffc, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1520,7 +1520,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114242563573807930
+--- !u!114 &114272189311682722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1528,10 +1528,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1349150361055734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77b8e612814cce488f6a6c228346be2, type: 3}
+  m_Script: {fileID: 11500000, guid: 67cc5030f00df1a42895fec0ec1a3aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseRotateSpeed: 0.3
+  _animator: {fileID: 95690985424869934}
 --- !u!137 &137112428768987920
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -277,6 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4423114872563542}
   - component: {fileID: 95960732650827304}
+  - component: {fileID: 114524943672212160}
   m_Layer: 0
   m_Name: skeleton_swordsman
   m_TagString: Untagged
@@ -1733,7 +1734,7 @@ Animator:
   m_GameObject: {fileID: 1381678045237876}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2eaf0f68e66ad42cc866bd3730895eaa, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8a1e2ecf216da4eccb651b0a50d93607, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5665697ddee6f5e449a3593225196291, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1741,6 +1742,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114524943672212160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381678045237876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cc5030f00df1a42895fec0ec1a3aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 95960732650827304}
 --- !u!137 &137214091807393342
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
