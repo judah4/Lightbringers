@@ -16,6 +16,7 @@ public class ListController : MonoBehaviour {
 
 	private void UpdateInventoryUI()
 	{
+		int count = 0;
 		foreach(Item item in Inventory.items)
 		{
 			GameObject itemPanel = Instantiate(ItemUiPrefab) as GameObject;
@@ -23,8 +24,21 @@ public class ListController : MonoBehaviour {
 
 			controller.itemName.text = item.itemName;
 
-			//itemPanel.transform.parent = ContentPanel.transform;
 			itemPanel.transform.SetParent(ContentPanel.transform);
+			count++;
+		}
+
+		if (count < 25)
+		{
+			for(int i = count; i < 25; i++)
+			{
+				GameObject itemPanel = Instantiate(ItemUiPrefab) as GameObject;
+				ItemController controller = itemPanel.GetComponent<ItemController>();
+
+				controller.itemName.text = "";
+
+				itemPanel.transform.SetParent(ContentPanel.transform);
+			}
 		}
 	}
 }
