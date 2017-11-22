@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest Battle.unity
     guid: be9fcb22caec169418755246065c90bc
+  - enabled: 1
+    path: Assets/Scenes/Slime Cave.unity
+    guid: 4634ba05d54212f4d8ee4842e88b007f

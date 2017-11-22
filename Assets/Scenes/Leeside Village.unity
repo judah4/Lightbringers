@@ -3766,7 +3766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadLocation: {x: 0, y: 0, z: 0}
-  SceneName: TrainingGround
+  SceneName: Slime Cave
 --- !u!23 &923884192
 MeshRenderer:
   m_ObjectHideFlags: 0
