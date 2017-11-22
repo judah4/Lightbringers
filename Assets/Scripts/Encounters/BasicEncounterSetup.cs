@@ -155,7 +155,7 @@ namespace Assets.Scripts.Encounters
             monsterChar.CharacterVisual.LoadModel((int)characterClass);
             Players.Add(monsterChar);
 
-            monsterChar.transform.position = new Vector3(-5 +(position)*-.25f,.5f, 4+(position * -2));
+            monsterChar.transform.position = new Vector3(-8 +(position*-.25f),.5f, 8+(position * -4));
             monsterChar.transform.eulerAngles = new Vector3(0, 90, 0);
 
             if(stats.Health > monsterChar.Hp)
@@ -187,7 +187,7 @@ namespace Assets.Scripts.Encounters
         {
             var encounter = EncounterLoader.LoadEncounterData(EncounterId);
             LoadLane(encounter.monsters.frontLane, 0);
-            LoadLane(encounter.monsters.backLane, 2);
+            LoadLane(encounter.monsters.backLane, 5);
 
         }
 
@@ -207,7 +207,7 @@ namespace Assets.Scripts.Encounters
                     monsterChar.CharacterVisual.LoadModel(monsterData.id);
                     Monsters.Add(monsterChar);
 
-                    monsterChar.transform.position = new Vector3(5 +(cnt+monsCnt)*.25f + laneOffset,.5f, 3 + (cnt+monsCnt)*-2);
+                    monsterChar.transform.position = new Vector3(8 +(cnt+monsCnt)*.25f + laneOffset,.5f, 6 + (cnt+monsCnt)*-4);
                     monsterChar.transform.eulerAngles = new Vector3(0, -90, 0);
 
                 }
