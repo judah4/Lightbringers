@@ -43,4 +43,9 @@ public class CharacterUIController : MonoBehaviour {
 			fieldText.text = input.ToString();
 		}
 	}
+
+	private void SetImage()
+	{
+
+	}
 }
