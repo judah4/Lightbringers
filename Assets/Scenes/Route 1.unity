@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 4
   Collider: {fileID: 168757747}
   Id: 3
   EncounterId: 2
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 12
   Collider: {fileID: 213517285}
   Id: 9
   EncounterId: 5
@@ -3771,7 +3771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 4
   Collider: {fileID: 883227387}
   Id: 6
   EncounterId: 6
@@ -4040,7 +4040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 4
   Collider: {fileID: 940847251}
   Id: 10
   EncounterId: 7
@@ -5498,7 +5498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 4
   Collider: {fileID: 1337791072}
   Id: 8
   EncounterId: 6
@@ -5838,7 +5838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 4
   Collider: {fileID: 1425161654}
   Id: 7
   EncounterId: 6
@@ -7272,7 +7272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 4
   Collider: {fileID: 1750946455}
   Id: 5
   EncounterId: 6

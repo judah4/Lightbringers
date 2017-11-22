@@ -3,7 +3,7 @@
 	"level": 2,
 	"hp": 11,
 	"mana" :6,
-	"attack" : 8,
+	"attack" : 6,
 	"defense" : 2,
 	"speed" :4,
 	"level" : 2,
