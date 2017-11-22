@@ -1,0 +1,11 @@
+{
+	"name": "Tiger",
+	"level": 5,
+	"hp": 70,
+	"mana" :70,
+	"attack" : 20,
+	"defense" : 5,
+	"speed" :14,
+	"level" : 5,
+	"exp" : 300
+}
