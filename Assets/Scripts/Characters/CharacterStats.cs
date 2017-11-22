@@ -148,10 +148,11 @@ public class CharacterStats : MonoBehaviour
 
         if(Exp >= ExpNeeded)
         {
+            Exp -= ExpNeeded;
             SetLevel(Level+1);
             
 
-            Exp -= ExpNeeded;
+            
             if(OnExp != null)
             {
                 OnExp(Exp, earned);
