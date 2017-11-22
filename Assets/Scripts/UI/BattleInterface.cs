@@ -22,6 +22,8 @@ namespace Assets.Scripts.UI
 
         public GameObject AttackPanel;
         public GameObject ActionsPanel;
+        public GameObject MovePanel;
+        public GameObject ItemPanel;
 
         // Use this for initialization
         void Start () {
@@ -39,6 +41,8 @@ namespace Assets.Scripts.UI
             {
                 AttackPanel.SetActive(false);
                 ActionsPanel.SetActive(true);
+                MovePanel.SetActive(false);
+                ItemPanel.SetActive(false);
             };
 
             encounter.OnEncounterState += Encounter_OnEncounterState;
@@ -68,6 +72,30 @@ namespace Assets.Scripts.UI
                 }
 
                 AttackButtons[cnt].gameObject.SetActive(!encounter.Monsters[cnt].Dead);
+
+            }
+
+            for (int cnt = 0; cnt < MoveButtons.Count; cnt++)
+            {
+                if (cnt >= encounter.Monsters.Count)
+                {
+                    MoveButtons[cnt].gameObject.SetActive(false);
+                    continue;
+                }
+
+                MoveButtons[cnt].gameObject.SetActive(!encounter.Monsters[cnt].Dead);
+
+            }
+
+            for (int cnt = 0; cnt < ItemButtons.Count; cnt++)
+            {
+                if (cnt >= encounter.Monsters.Count)
+                {
+                    ItemButtons[cnt].gameObject.SetActive(false);
+                    continue;
+                }
+
+                ItemButtons[cnt].gameObject.SetActive(!encounter.Monsters[cnt].Dead);
 
             }
         }
