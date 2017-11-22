@@ -64,13 +64,13 @@ public class CharacterController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        WorldStateManager.Instance.SetPosition(transform.position);
-        float translation = Input.GetAxis("Vertical") * speed; //gets input forwards and backwards
-        float straffe = Input.GetAxis("Horizontal") * speed; //gets input left and right
-        translation *= Time.deltaTime; //keeps movements smooth and in time with update
-        straffe *= Time.deltaTime; //keeps movements smooth and in time with update
+        //WorldStateManager.Instance.SetPosition(transform.position);
+        //float translation = Input.GetAxis("Vertical") * speed; //gets input forwards and backwards
+        //float straffe = Input.GetAxis("Horizontal") * speed; //gets input left and right
+        //translation *= Time.deltaTime; //keeps movements smooth and in time with update
+        //straffe *= Time.deltaTime; //keeps movements smooth and in time with update
 
-        transform.Translate(new Vector3(straffe /*z-axis*/, 0, translation/*x-axis*/));
+        //transform.Translate(new Vector3(straffe /*z-axis*/, 0, translation/*x-axis*/));
         
 
         //half speed to crouch or return back to normal after sprint
@@ -95,6 +95,7 @@ public class CharacterController : MonoBehaviour {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
             isGrounded = false;
+            //just to be sure, set isGrounded one more time
         }
 
         
@@ -122,6 +123,14 @@ public class CharacterController : MonoBehaviour {
 
     private void FixedUpdate()
     {
+         float translation = Input.GetAxis("Vertical") * speed; //gets input forwards and backwards
+        float straffe = Input.GetAxis("Horizontal") * speed; //gets input left and right
+        translation *= Time.fixedDeltaTime; //keeps movements smooth and in time with update
+        straffe *= Time.fixedDeltaTime; //keeps movements smooth and in time with update
+
+        transform.Translate(new Vector3(straffe /*z-axis*/, 0, translation/*x-axis*/));
+
+
         _velocity = transform.position - lastPos;
         lastPos = transform.position;
 
