@@ -5557,7 +5557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 0.1
-  EndSize: 1.02
+  EndSize: 4
   Collider: {fileID: 1339392548}
   Id: 4
   EncounterId: 4
