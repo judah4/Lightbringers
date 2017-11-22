@@ -11,6 +11,14 @@ namespace Assets.Scripts.Encounters
         // Use this for initialization
         void Start () {
 
+            //load from World manager
+
+            if(World.WorldStateManager.Instance.CurrentScene == "Route 1")
+            {
+                SceneName = "Forest Battle";
+            }
+
+
             for (int cnt = 0; cnt < SceneManager.sceneCount; cnt++)
             {
                 if(SceneManager.GetSceneAt(cnt).name == SceneName)
