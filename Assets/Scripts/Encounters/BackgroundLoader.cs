@@ -17,6 +17,10 @@ namespace Assets.Scripts.Encounters
             {
                 SceneName = "Forest Battle";
             }
+            else if(World.WorldStateManager.Instance.CurrentScene == "Slime Cave")
+            {
+                SceneName = "Cave Battle";
+            }
 
 
             for (int cnt = 0; cnt < SceneManager.sceneCount; cnt++)
