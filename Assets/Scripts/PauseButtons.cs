@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.World;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -29,6 +30,8 @@ public class PauseButtons : MonoBehaviour {
 
 	public void GoToCharacterStatsMenu()
 	{
+		//Save Current Scene
+		WorldStateManager.Instance.CurrentScene = SceneManager.GetActiveScene().ToString();
 		SceneManager.LoadScene("CharacterStatsMenu");
 	}
 
