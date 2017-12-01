@@ -138,11 +138,11 @@ namespace Assets.Scripts.Encounters
         void SpawnPlayer(CharacterClass characterClass, int position)
         {
             Debug.Log("Player Pos " + position);
-            if(position >= WorldStateManager.Instance.CharactereStats.Count)
+            if(position >= WorldStateManager.Instance.CharacterStats.Count)
             {
-                WorldStateManager.Instance.CharactereStats.Add(new CharacterStat());
+                WorldStateManager.Instance.CharacterStats.Add(new CharacterStats());
             }
-            var stats =  WorldStateManager.Instance.CharactereStats[position];
+            var stats =  WorldStateManager.Instance.CharacterStats[position];
 
             var monstergm = new GameObject("Char");
             var monsterChar = monstergm.AddComponent<CharacterStats>();
@@ -158,21 +158,21 @@ namespace Assets.Scripts.Encounters
             monsterChar.transform.position = new Vector3(-8 +(position*-.25f),.5f, 8+(position * -4));
             monsterChar.transform.eulerAngles = new Vector3(0, 90, 0);
 
-            if(stats.Health > monsterChar.Hp)
+            if(stats.CurrentHp > monsterChar.MaxHp)
             {
-                stats.Health = monsterChar.Hp;
+                stats.CurrentHp = monsterChar.MaxHp;
             }
-            if(stats.Mana > monsterChar.Mana)
+            if(stats.MaxMana > monsterChar.MaxMana)
             {
-                stats.Mana = monsterChar.Mana;
+                stats.MaxMana = monsterChar.MaxMana;
             }
 
-            monsterChar.CurrentHp = stats.Health;
-            monsterChar.CurrentMana = stats.Mana;
+            monsterChar.CurrentHp = stats.CurrentHp;
+            monsterChar.CurrentMana = stats.MaxMana;
             monsterChar.Exp = stats.Exp;
 
             monsterChar.OnHealthChange += (health) => {
-                stats.Health = health;
+                stats.CurrentHp = health;
             };
              monsterChar.OnLevel += (level) => {
                 stats.Level = level;

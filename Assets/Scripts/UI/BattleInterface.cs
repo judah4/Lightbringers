@@ -34,7 +34,7 @@ namespace Assets.Scripts.UI
             {
                 var player = encounter.Players[cnt];
                 Names[cnt].text = player.name;
-                HealthBars[cnt].SetHealth(player.CurrentHp, player.Hp);
+                HealthBars[cnt].SetHealth(player.CurrentHp, player.MaxHp);
             }
 
             encounter.OnTurn += () =>
@@ -60,7 +60,7 @@ namespace Assets.Scripts.UI
             for (int cnt = 0; cnt < encounter.Players.Count; cnt++)
             {
                 var player = encounter.Players[cnt];
-                HealthBars[cnt].SetHealth(player.CurrentHp, player.Hp);
+                HealthBars[cnt].SetHealth(player.CurrentHp, player.MaxHp);
             }
 
             for (int cnt = 0; cnt < AttackButtons.Count; cnt++)

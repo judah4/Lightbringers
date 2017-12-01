@@ -8,9 +8,9 @@ using System;
 public class CharacterStats : MonoBehaviour
 {
 
-    public int Hp;
+    public int MaxHp;
     public int CurrentHp;
-    public int Mana;
+    public int MaxMana;
     public int CurrentMana;
 
     public int Attack;
@@ -68,15 +68,18 @@ public class CharacterStats : MonoBehaviour
 
     void CalcStats()
     {
-        if(CharacterClass == CharacterClass.Classless)
-            return;
+		if (CharacterClass == CharacterClass.Classless)
+		{
+			Debug.Log("Character has no class!");
+			return;
+		}
 
         var calcer = new StatCalcer(CharacterClass);
 
-        Hp = calcer.GetHp(Level);
-        CurrentHp = Hp;
-        Mana = calcer.GetMana(Level);
-        CurrentMana = Mana;
+        MaxHp = calcer.GetHp(Level);
+        CurrentHp = MaxHp;
+        MaxMana = calcer.GetMana(Level);
+        CurrentMana = MaxMana;
         Attack = calcer.GetAttack(Level);
         Defense = calcer.GetDefense(Level);
         Speed = calcer.GetSpeed(Level);
@@ -92,10 +95,10 @@ public class CharacterStats : MonoBehaviour
     {
         CharacterClass = CharacterClass.Classless;
         name = monsterData.name;
-        Hp = monsterData.hp;
-        CurrentHp = Hp;
-        Mana = monsterData.mana;
-        CurrentMana = Mana;
+        MaxHp = monsterData.hp;
+        CurrentHp = MaxHp;
+        MaxMana = monsterData.mana;
+        CurrentMana = MaxMana;
 
         Level = monsterData.level;
 

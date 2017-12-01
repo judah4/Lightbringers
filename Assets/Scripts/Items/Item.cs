@@ -7,18 +7,9 @@ using UnityEngine;
 namespace Assets.Scripts.Items
 {
     [Serializable]
-    public class Item
+    public abstract class Item
     {
 		public string itemName;
         public int id;
-        public ItemType itemType;
-
-    }
-
-    public enum ItemType
-    {
-        Basic = 0,
-        Consumable = 1,
-        Equipment = 2
     }
 }
