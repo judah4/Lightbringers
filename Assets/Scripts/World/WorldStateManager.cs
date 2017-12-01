@@ -20,9 +20,11 @@ namespace Assets.Scripts.World
         public Vector3 Position;
         public bool positionSet = false;
 
-        public List<CharacterStat> CharactereStats = new List<CharacterStat>();
+        public List<CharacterStats> CharacterStats = new List<CharacterStats>();
+		public List<CharacterStat> CharactereStats = new List<CharacterStat>();
 
-        public List<int> MonsterIds = new List<int>();
+
+		public List<int> MonsterIds = new List<int>();
         public int EncounterId = 1;
         
         public void SetPosition(Vector3 position)

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.World;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,9 +28,11 @@ public class PauseButtons : MonoBehaviour {
         print(("tried to switch to " + "SceneName"));
     }
 
-	public void GoToInfoMenu()
+	public void GoToCharacterStatsMenu()
 	{
-		print("testing");
+		//Save Current Scene
+		WorldStateManager.Instance.CurrentScene = SceneManager.GetActiveScene().ToString();
+		SceneManager.LoadScene("CharacterStatsMenu");
 	}
 
     public void ExitGame()

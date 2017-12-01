@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Slime Cave.unity
     guid: 4634ba05d54212f4d8ee4842e88b007f
+  - enabled: 1
+    path: Assets/Scenes/CharacterStatsMenu.unity
+    guid: 15e38c7ddd1d19341acd17789620f906
