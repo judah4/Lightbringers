@@ -84,20 +84,6 @@ public class CharacterController : MonoBehaviour {
         {
             speed *= speedMult;
         }
-
-        //adds jump function if player is in the ground
-        if ((Input.GetButton("Jump")) && isGrounded)
-        {
-            isGrounded = false; //for some reason grounded isn't being updated until a second jump is completed ??????!?!?!???
-            isGrounded = false;
-
-            //adds upward force, using gravity to mke jump smooth 
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-            isGrounded = false;
-            //just to be sure, set isGrounded one more time
-        }
-
         
         if (Input.GetButtonUp("Pause")) //unlocks mouse after pressing escape key
         {
