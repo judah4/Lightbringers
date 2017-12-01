@@ -27,9 +27,9 @@ public class PauseButtons : MonoBehaviour {
         print(("tried to switch to " + "SceneName"));
     }
 
-	public void GoToInfoMenu()
+	public void GoToCharacterStatsMenu()
 	{
-		print("testing");
+		SceneManager.LoadScene("CharacterStatsMenu");
 	}
 
     public void ExitGame()
