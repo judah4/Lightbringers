@@ -1,0 +1,16 @@
+{
+  "monsters": {
+		"frontLane": [
+		{
+		  "id": 6,
+		  "count": 2
+		}
+		],
+		"backLane": [
+		{
+		  "id": 11,
+		  "count": 1
+		}
+		]
+	}
+}
