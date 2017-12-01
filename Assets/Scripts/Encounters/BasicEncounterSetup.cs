@@ -158,17 +158,17 @@ namespace Assets.Scripts.Encounters
             monsterChar.transform.position = new Vector3(-8 +(position*-.25f),.5f, 8+(position * -4));
             monsterChar.transform.eulerAngles = new Vector3(0, 90, 0);
 
-            if(stats.CurrentHp > monsterChar.Hp)
+            if(stats.CurrentHp > monsterChar.MaxHp)
             {
-                stats.CurrentHp = monsterChar.Hp;
+                stats.CurrentHp = monsterChar.MaxHp;
             }
-            if(stats.Mana > monsterChar.Mana)
+            if(stats.MaxMana > monsterChar.MaxMana)
             {
-                stats.Mana = monsterChar.Mana;
+                stats.MaxMana = monsterChar.MaxMana;
             }
 
             monsterChar.CurrentHp = stats.CurrentHp;
-            monsterChar.CurrentMana = stats.Mana;
+            monsterChar.CurrentMana = stats.MaxMana;
             monsterChar.Exp = stats.Exp;
 
             monsterChar.OnHealthChange += (health) => {

@@ -25,8 +25,8 @@ public class CharacterUIController : MonoBehaviour {
 		SetField(namePanel, "Level", charInfo.Level);
 
 		SetField(namePanel, "Experience", charInfo.Exp + "/" + charInfo.ExpNeeded);
-		SetField(namePanel, "Hp",  charInfo.CurrentHp + "/" + charInfo.Hp);
-		SetField(namePanel, "Mana", charInfo.CurrentMana + "/" + charInfo.Mana);
+		SetField(namePanel, "Hp",  charInfo.CurrentHp + "/" + charInfo.MaxHp);
+		SetField(namePanel, "Mana", charInfo.CurrentMana + "/" + charInfo.MaxMana);
 
 		SetField(statPanel, "Attack", charInfo.Attack);
 		SetField(statPanel, "Defence", charInfo.Defense);
