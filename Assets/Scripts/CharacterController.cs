@@ -64,7 +64,7 @@ public class CharacterController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //WorldStateManager.Instance.SetPosition(transform.position);
+        WorldStateManager.Instance.SetPosition(transform.position);
         //float translation = Input.GetAxis("Vertical") * speed; //gets input forwards and backwards
         //float straffe = Input.GetAxis("Horizontal") * speed; //gets input left and right
         //translation *= Time.deltaTime; //keeps movements smooth and in time with update
