@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643741f6530db2848889ab8b68e75ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadLocation: {x: 0, y: 0, z: 0}
+  LoadLocation: {x: 50.28, y: 0, z: -4.66}
   SceneName: Guild Hall
 --- !u!23 &612633410
 MeshRenderer:
@@ -3770,7 +3770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643741f6530db2848889ab8b68e75ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadLocation: {x: 0, y: 0, z: 0}
+  LoadLocation: {x: 142.8, y: 0, z: 7.71}
   SceneName: Slime Cave
 --- !u!23 &923884192
 MeshRenderer:
