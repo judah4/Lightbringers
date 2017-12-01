@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.World;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ public class CharacterUIController : MonoBehaviour {
 	public GameObject namePanel, statPanel;
 	// Use this for initialization
 	void Start () {
-		UpdateUI();
+		//UpdateUI();
 	}
 	
 	// Update is called once per frame
@@ -24,7 +25,7 @@ public class CharacterUIController : MonoBehaviour {
 		SetField(namePanel, "Level", charInfo.Level);
 
 		SetField(namePanel, "Experience", charInfo.Exp + "/" + charInfo.ExpNeeded);
-		SetField(namePanel, "Hp", charInfo.CurrentHp + "/" + charInfo.Hp);
+		SetField(namePanel, "Hp",  charInfo.CurrentHp + "/" + charInfo.Hp);
 		SetField(namePanel, "Mana", charInfo.CurrentMana + "/" + charInfo.Mana);
 
 		SetField(statPanel, "Attack", charInfo.Attack);

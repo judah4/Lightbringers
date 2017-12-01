@@ -16,12 +16,13 @@ namespace Assets.Scripts.World
             return _instance;
         } }
 
-        public string CurrentScene;
+
+
+		public string CurrentScene;
         public Vector3 Position;
         public bool positionSet = false;
 
-        public List<CharacterStats> CharacterStats = new List<CharacterStats>();
-		public List<CharacterStat> CharactereStats = new List<CharacterStat>();
+		public List<CharacterStats> CharacterStats = new List<CharacterStats>();
 
 
 		public List<int> MonsterIds = new List<int>();
@@ -51,5 +52,34 @@ namespace Assets.Scripts.World
             }
         }
 
-    }
+		private void Start()
+		{
+			SetupCharacters();
+		}
+
+		void SetupCharacters()
+		{
+			var pos = 0;
+
+			SpawnPlayer(CharacterClass.Warrior, pos++);
+			SpawnPlayer(CharacterClass.Wizard, pos++);
+			SpawnPlayer(CharacterClass.Cleric, pos++);
+			SpawnPlayer(CharacterClass.Rogue, pos);
+		}
+
+		void SpawnPlayer(CharacterClass characterClass, int position)
+		{
+			Debug.Log("Player Pos " + position);
+			if (position >= WorldStateManager.Instance.CharacterStats.Count)
+			{
+				var newCharObject = new GameObject().AddComponent<CharacterStats>();
+				newCharObject.transform.parent = WorldStateManager.Instance.transform;
+				var newChar = newCharObject.GetComponent<CharacterStats>();
+				newChar.SetClass(characterClass);
+				//Object.DontDestroyOnLoad(newCharObject);
+				WorldStateManager.Instance.CharacterStats.Add(newChar);
+			}
+		}
+
+	}
 }

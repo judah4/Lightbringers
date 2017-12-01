@@ -68,8 +68,11 @@ public class CharacterStats : MonoBehaviour
 
     void CalcStats()
     {
-        if(CharacterClass == CharacterClass.Classless)
-            return;
+		if (CharacterClass == CharacterClass.Classless)
+		{
+			Debug.Log("Character has no class!");
+			return;
+		}
 
         var calcer = new StatCalcer(CharacterClass);
 

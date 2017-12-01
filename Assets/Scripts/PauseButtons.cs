@@ -31,7 +31,7 @@ public class PauseButtons : MonoBehaviour {
 	public void GoToCharacterStatsMenu()
 	{
 		//Save Current Scene
-		WorldStateManager.Instance.CurrentScene = SceneManager.GetActiveScene().ToString();
+		//WorldStateManager.Instance.CurrentScene = SceneManager.GetActiveScene().ToString();
 		SceneManager.LoadScene("CharacterStatsMenu");
 	}
 

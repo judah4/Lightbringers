@@ -11,10 +11,12 @@ public class LoadCharacterStats : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//SetupCharacters();
 		for(int i = 0; i < 4; i++)
 		{
 			var charController = (CharacterUIController)CharacterPanels[i].GetComponent(typeof(CharacterUIController));
 			charController.charInfo = WorldStateManager.Instance.CharacterStats[i];
+			charController.UpdateUI();
 		}
 	}
 	
