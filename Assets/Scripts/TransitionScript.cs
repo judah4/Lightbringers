@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.World;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -26,7 +27,9 @@ public class TransitionScript : MonoBehaviour
 
             if (Input.GetButton("Submit")|| Input.GetMouseButton(0))
             {
+                
                 SceneManager.LoadScene(SceneName);
+                WorldStateManager.Instance.Position = LoadLocation;
 
                 print(("tried to switch to " + SceneName));
             }
