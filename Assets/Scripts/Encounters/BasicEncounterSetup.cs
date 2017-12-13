@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +6,7 @@ using Assets.Scripts.Characters.MonsterTemplates;
 using Assets.Scripts.Encounters.States;
 using UnityEngine;
 using Assets.Scripts.World;
+using Random = UnityEngine.Random;
 
 namespace Assets.Scripts.Encounters
 {
@@ -35,8 +35,8 @@ namespace Assets.Scripts.Encounters
         public EncounterStates EncounterState {get { return _encounterState; }}
         public float BeginTime = 3;
 
-        public event Action OnTurn;
-        public event Action<EncounterStates> OnEncounterState;
+        public event System.Action OnTurn;
+        public event System.Action<EncounterStates> OnEncounterState;
 
         public void Awake()
         {
@@ -140,7 +140,7 @@ namespace Assets.Scripts.Encounters
             Debug.Log("Player Pos " + position);
             if(position >= WorldStateManager.Instance.CharacterStats.Count)
             {
-                WorldStateManager.Instance.CharacterStats.Add(new CharacterStats());
+                WorldStateManager.Instance.CharacterStats.Add(new GameObject("char").AddComponent<CharacterStats>());
             }
             var stats =  WorldStateManager.Instance.CharacterStats[position];
 
@@ -222,7 +222,7 @@ namespace Assets.Scripts.Encounters
                 if (TurnOrders.Count < 1)
                 {
                     //everyone dead?
-                    throw new Exception("Games over man");
+                    throw new System.Exception("Games over man");
                 }
 
             }
@@ -282,16 +282,20 @@ namespace Assets.Scripts.Encounters
 
         int PickTargetPositionFromList(List<CharacterStats> characters )
         {
-
+            var liveList = new List<int>();
             for (int cnt = 0; cnt < characters.Count; cnt++)
             {
                 var mon = characters[cnt];
                 if (mon.Dead == false)
                 {
-                    return cnt;
+                    liveList.Add(cnt);
+                    //return cnt;
                 }
             }
-            return 0;
+            if(liveList.Count < 1)
+                return 0;
+
+            return liveList[Random.Range(0, liveList.Count)];
         }
 
         public void CleanTurnOrders()
