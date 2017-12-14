@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,8 @@ using Assets.Scripts.Encounters.States;
 using UnityEngine;
 using Assets.Scripts.World;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
 namespace Assets.Scripts.Encounters
 {
     public class BasicEncounterSetup : MonoBehaviour
@@ -48,7 +51,8 @@ namespace Assets.Scripts.Encounters
             SpawnEncounter();
             for (int cnt = 0; cnt < Monsters.Count; cnt++)
             {
-                totalExp += Monsters[cnt].Exp;
+                if(Monsters[cnt] != null)
+                    totalExp += Monsters[cnt].Exp;
             }
 
             sumExperience.text = "Experience: blabla " + Convert.ToString(totalExp);
