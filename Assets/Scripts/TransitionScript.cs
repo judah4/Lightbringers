@@ -27,7 +27,7 @@ public class TransitionScript : MonoBehaviour
 
             if (Input.GetButton("Submit")|| Input.GetMouseButton(0))
             {
-                
+                WorldStateManager.Instance.Position = LoadLocation;
                 SceneManager.LoadScene(SceneName);
                 WorldStateManager.Instance.Position = LoadLocation;
 
