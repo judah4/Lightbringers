@@ -7,7 +7,9 @@ public class SimpleDialog : MonoBehaviour {
     [TextArea]
     public string text;
 
+    [SerializeField]
     private bool _inRange = false; 
+    [SerializeField]
     private float timer = -1;
 
 	// Use this for initialization
@@ -25,7 +27,7 @@ public class SimpleDialog : MonoBehaviour {
             return;
         }
 
-        timer--;
+        timer-=Time.deltaTime;
         if(timer < 0)
         {
             _inRange = false;
