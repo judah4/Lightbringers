@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643741f6530db2848889ab8b68e75ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadLocation: {x: 0, y: 0, z: 0}
+  LoadLocation: {x: 4.54, y: 0, z: -15.92}
   SceneName: Route 1
 --- !u!23 &637581098
 MeshRenderer:
