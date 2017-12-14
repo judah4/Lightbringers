@@ -20,6 +20,7 @@ namespace Assets.Scripts.UI
         public List<Text> Names;
         public Text TopName;
 
+        public GameObject BackButton;
         public GameObject AttackPanel;
         public GameObject ActionsPanel;
         public GameObject MovePanel;
@@ -39,6 +40,7 @@ namespace Assets.Scripts.UI
 
             encounter.OnTurn += () =>
             {
+                BackButton.SetActive(false);
                 AttackPanel.SetActive(false);
                 ActionsPanel.SetActive(true);
                 MovePanel.SetActive(false);
