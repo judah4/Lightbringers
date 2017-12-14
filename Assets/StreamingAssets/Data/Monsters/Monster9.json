@@ -1,0 +1,10 @@
+{
+	"name": "Skeleton",
+	"level": 9,
+	"hp": 80,
+	"mana" :30,
+	"attack" : 20,
+	"defense" : 10,
+	"speed" :14,
+	"exp" : 400
+}
