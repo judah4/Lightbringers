@@ -6,8 +6,7 @@ using Assets.Scripts.Characters.MonsterTemplates;
 using Assets.Scripts.Encounters.States;
 using UnityEngine;
 using Assets.Scripts.World;
-using Random = UnityEngine.Random;
-
+using UnityEngine.UI;
 namespace Assets.Scripts.Encounters
 {
     public class BasicEncounterSetup : MonoBehaviour
@@ -20,6 +19,9 @@ namespace Assets.Scripts.Encounters
             GameOver
         }
 
+        public GameObject GameOverPanel;
+        public GameObject victoryPanel;
+        public Text sumExperience;
         public int EncounterId;
         public List<CharacterStats> Monsters = new List<CharacterStats>();
 
@@ -35,15 +37,22 @@ namespace Assets.Scripts.Encounters
         public EncounterStates EncounterState {get { return _encounterState; }}
         public float BeginTime = 3;
 
-        public event System.Action OnTurn;
-        public event System.Action<EncounterStates> OnEncounterState;
+        public event Action OnTurn;
+        public event Action<EncounterStates> OnEncounterState;
+        public int totalExp = 0;
 
         public void Awake()
         {
             EncounterId = WorldStateManager.Instance.EncounterId;
             SpawnPlayers();
             SpawnEncounter();
-            
+            for (int cnt = 0; cnt < Monsters.Count; cnt++)
+            {
+                totalExp += Monsters[cnt].Exp;
+            }
+
+            sumExperience.text = "Experience: blabla " + Convert.ToString(totalExp);
+
             //order
             TurnOrder = new TurnOrder(this);
             TurnOrder.Generate();
@@ -121,19 +130,12 @@ namespace Assets.Scripts.Encounters
                      Players[cnt].CharacterVisual.Character.Trigger(AnimationTrigger.Victory);
                 }
 
-                var totalExp = 0;
-                for(int cnt = 0; cnt < Monsters.Count; cnt++)
-                {
-                    if(Monsters[cnt] == null)
-                        continue;
-                    totalExp += Monsters[cnt].Exp;
-                }
 
                 for(int cnt = 0; cnt < Players.Count; cnt++)
                 {
                      Players[cnt].GiveExp(totalExp);
                 }
-
+                victoryPanel.SetActive(true);
             };
         }
 
@@ -254,6 +256,7 @@ namespace Assets.Scripts.Encounters
 
             if (AllDead(Players))
             {
+                GameOverPanel.SetActive(true);
                 Debug.Log("Monsters win!");
                 ChangeEncounterState(EncounterStates.GameOver);
             }

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0bc67082f9e56094da8f42054357a4ff
+timeCreated: 1513288014
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Repetition DEMO
+  fontNames:
+  - Repetition DEMO
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
