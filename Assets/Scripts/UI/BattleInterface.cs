@@ -71,7 +71,7 @@ namespace Assets.Scripts.UI
                     continue;
                 }
 
-                AttackButtons[cnt].gameObject.SetActive(!encounter.Monsters[cnt].Dead);
+                AttackButtons[cnt].gameObject.SetActive(encounter.Monsters[cnt] != null && !encounter.Monsters[cnt].Dead);
 
             }
 
@@ -83,7 +83,7 @@ namespace Assets.Scripts.UI
                     continue;
                 }
 
-                MoveButtons[cnt].gameObject.SetActive(!encounter.Monsters[cnt].Dead);
+                MoveButtons[cnt].gameObject.SetActive(encounter.Monsters[cnt] != null && !encounter.Monsters[cnt].Dead);
 
             }
 
@@ -95,7 +95,7 @@ namespace Assets.Scripts.UI
                     continue;
                 }
 
-                ItemButtons[cnt].gameObject.SetActive(!encounter.Monsters[cnt].Dead);
+                ItemButtons[cnt].gameObject.SetActive(encounter.Monsters[cnt] != null && !encounter.Monsters[cnt].Dead);
 
             }
         }

@@ -124,6 +124,8 @@ namespace Assets.Scripts.Encounters
                 var totalExp = 0;
                 for(int cnt = 0; cnt < Monsters.Count; cnt++)
                 {
+                    if(Monsters[cnt] == null)
+                        continue;
                     totalExp += Monsters[cnt].Exp;
                 }
 
@@ -140,7 +142,9 @@ namespace Assets.Scripts.Encounters
             Debug.Log("Player Pos " + position);
             if(position >= WorldStateManager.Instance.CharacterStats.Count)
             {
-                WorldStateManager.Instance.CharacterStats.Add(new GameObject("char").AddComponent<CharacterStats>());
+                var charStat = new GameObject("char").AddComponent<CharacterStats>();
+                WorldStateManager.Instance.CharacterStats.Add(charStat);
+                charStat.SetClass(characterClass);
             }
             var stats =  WorldStateManager.Instance.CharacterStats[position];
 
@@ -211,6 +215,14 @@ namespace Assets.Scripts.Encounters
                     monsterChar.transform.eulerAngles = new Vector3(0, -90, 0);
 
                 }
+
+                
+
+            }
+
+            while (Monsters.Count % 3 != 0)
+            {
+                Monsters.Add(null);
             }
         }
 
@@ -261,6 +273,9 @@ namespace Assets.Scripts.Encounters
         {
             for (int cnt = 0; cnt < characters.Count; cnt++)
             {
+                if(characters[cnt] == null)
+                    continue;
+
                 if (characters[cnt].Dead == false)
                     return false;
             }
@@ -285,6 +300,9 @@ namespace Assets.Scripts.Encounters
             var liveList = new List<int>();
             for (int cnt = 0; cnt < characters.Count; cnt++)
             {
+                if(characters[cnt] == null)
+                    continue;
+
                 var mon = characters[cnt];
                 if (mon.Dead == false)
                 {

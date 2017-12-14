@@ -41,9 +41,8 @@ namespace Assets.Scripts.Encounters
         {
             for (int cnt = 0; cnt < characters.Count; cnt++)
             {
-                
                 var character = characters[cnt];
-                if(character.Dead)
+                if(character == null || character.Dead)
                     continue;
 
                 Characters.Add(character);
