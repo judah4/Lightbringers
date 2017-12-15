@@ -55,7 +55,7 @@ namespace Assets.Scripts.Encounters
                     totalExp += Monsters[cnt].Exp;
             }
 
-            sumExperience.text = "Experience: blabla " + Convert.ToString(totalExp);
+            sumExperience.text = "Experience: " + Convert.ToString(totalExp);
 
             //order
             TurnOrder = new TurnOrder(this);
