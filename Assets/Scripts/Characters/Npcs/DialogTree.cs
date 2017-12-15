@@ -15,6 +15,8 @@ public class DialogBranch
 
     public int Id = 0;
     public bool CompleteEvent;
+    public int EncounterId=0;
+    public int FightId = 0;
     public List<TextAndAudio> Texts;
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts.Encounters;
 using Assets.Scripts.World;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogBox : MonoBehaviour {
@@ -30,6 +31,9 @@ public class DialogBox : MonoBehaviour {
     public int dialogId = 0;
     public int dialogIndex = 0;
     public int dialogTextIndex = 0;
+
+    private System.Action onEndChat;
+
 	// Use this for initialization
 	void Start () {
 		TextUI.text = "";
@@ -49,6 +53,10 @@ public class DialogBox : MonoBehaviour {
                         ShowText(DialogTree.Branches[dialogIndex].Texts[dialogTextIndex]);
                         return;
                     }
+                }
+                if (onEndChat != null)
+                {
+                    onEndChat();
                 }
                 //done
                 Destroy(gameObject);
@@ -95,6 +103,19 @@ public class DialogBox : MonoBehaviour {
         if (DialogTree.Branches[dialogIndex].CompleteEvent)
         {
             WorldStateManager.Instance.Events.Add(DialogTree.Branches[dialogIndex].Id);
+        }
+
+        if (DialogTree.Branches[dialogIndex].FightId != 0)
+        {
+            onEndChat += () =>
+            {
+                VoiceManager.Instance.TriggerVoice();
+                WorldStateManager.Instance.MonsterIds.Add(DialogTree.Branches[dialogIndex].FightId);
+                WorldStateManager.Instance.EncounterId = DialogTree.Branches[dialogIndex].EncounterId;
+                
+                SceneManager.LoadScene("BattleInterface");
+                
+            };
         }
 
         dialogTextIndex = 0;

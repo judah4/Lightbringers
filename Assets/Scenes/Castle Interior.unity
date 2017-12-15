@@ -2892,6 +2892,8 @@ MonoBehaviour:
   Branches:
   - Id: 1000
     CompleteEvent: 1
+    EncounterId: 14
+    FightId: 500
     Texts:
     - Text: Thank you for liberating my kingdom!
       Audio: {fileID: 8300000, guid: dd55974f97899bb41b6cdbf64c36a4a0, type: 3}
@@ -2908,6 +2910,8 @@ MonoBehaviour:
       Audio: {fileID: 8300000, guid: 26a46f51c20d867409c5d2dcd9d7e92a, type: 3}
   - Id: 1001
     CompleteEvent: 1
+    EncounterId: 0
+    FightId: 0
     Texts:
     - Text: Nooooooo
       Audio: {fileID: 8300000, guid: 05daf8eff60a7864193077ea1bade168, type: 3}
