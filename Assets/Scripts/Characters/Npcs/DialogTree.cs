@@ -15,5 +15,12 @@ public class DialogBranch
 
     public int Id = 0;
     public bool CompleteEvent;
-    public List<string> Texts;
+    public List<TextAndAudio> Texts;
+}
+
+[Serializable]
+public class TextAndAudio
+{
+    public string Text;
+    public AudioClip Audio;
 }

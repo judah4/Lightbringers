@@ -143,11 +143,16 @@ MonoBehaviour:
     Hurts:
     - {fileID: 8300000, guid: e9d2bc5c20d28a44e9e36955ef1941c9, type: 3}
   - Attacks:
-    - {fileID: 8300000, guid: 39dee8a35048db84787a2254bd82b8f1, type: 3}
+    - {fileID: 8300000, guid: 265100296aae6114ba5449155b08fb3f, type: 3}
+    - {fileID: 8300000, guid: a62d944271c74cc43a3be44421cd7ba8, type: 3}
+    - {fileID: 8300000, guid: 2356b88bcd5ed3f4b9551ed33bad616e, type: 3}
     Deaths:
-    - {fileID: 8300000, guid: e9d2bc5c20d28a44e9e36955ef1941c9, type: 3}
+    - {fileID: 8300000, guid: 2f65ff9c8c4925841bed5cc249b6c0d4, type: 3}
+    - {fileID: 8300000, guid: 9bd3c84ebcfc6244387c9ed8e315abef, type: 3}
     Hurts:
-    - {fileID: 8300000, guid: e9d2bc5c20d28a44e9e36955ef1941c9, type: 3}
+    - {fileID: 8300000, guid: 93f87216d2a46424a89861b80174e33e, type: 3}
+    - {fileID: 8300000, guid: 4d3c4c844dbed494598e3cd0ade38886, type: 3}
+    - {fileID: 8300000, guid: 2251d1a16ae0e244780d752e44c27531, type: 3}
   - Attacks:
     - {fileID: 8300000, guid: 39dee8a35048db84787a2254bd82b8f1, type: 3}
     Deaths:

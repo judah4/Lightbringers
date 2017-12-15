@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Encounters;
 using Assets.Scripts.World;
 using UnityEngine;
 using UnityEngine.UI;
@@ -60,9 +61,16 @@ public class DialogBox : MonoBehaviour {
         }
 	}
 
-    public void ShowText(string text)
+    public void ShowText(TextAndAudio text)
     {
-        _text = text;
+        _text = text.Text;
+
+        if (text.Audio != null)
+        {
+            //play
+            AudioSource.PlayClipAtPoint(text.Audio, Camera.main.transform.position);
+        }
+
         _showSize = 1;
         StopAllCoroutines();
         StartCoroutine(RunShowing());

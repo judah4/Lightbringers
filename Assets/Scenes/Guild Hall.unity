@@ -7534,23 +7534,30 @@ MonoBehaviour:
   - Id: 1
     CompleteEvent: 1
     Texts:
-    - Welcome!
-    - Fresh Adveturers huh? Well, show me what you can do.
-    - Go defeat the slime king in the training cave behind the building
+    - Text: Welcome!
+      Audio: {fileID: 8300000, guid: 5c21cc963577df94682ae1afcd63c1f1, type: 3}
+    - Text: Fresh Adveturers huh? Well, show me what you can do.
+      Audio: {fileID: 0}
+    - Text: Go defeat the slime king in the training cave behind the building
+      Audio: {fileID: 8300000, guid: 066f41bc99ad9544e921c126334d1127, type: 3}
   - Id: 2
     CompleteEvent: 0
     Texts:
-    - Go, I'm wiating
+    - Text: Go, Im waiting
+      Audio: {fileID: 8300000, guid: d75040b855edf674cba462b1954839ec, type: 3}
   - Id: 3
     CompleteEvent: 1
     Texts:
-    - Good job! you are now offically guild members!
-    - A new mission just came in. The king wants you to investigate a dragon near
-      the castle town.
+    - Text: Good job! you are now offically guild members!
+      Audio: {fileID: 8300000, guid: 4be4888eb7b43cd4a8da68bd61c25b6f, type: 3}
+    - Text: A new mission just came in. The king wants you to investigate a dragon
+        near the castle town.
+      Audio: {fileID: 8300000, guid: f0de1c31c4f8aed45b130565151180ad, type: 3}
   - Id: 4
     CompleteEvent: 0
     Texts:
-    - Good luck!
+    - Text: Good luck!
+      Audio: {fileID: 8300000, guid: 9b2fdcc856004104dbcd0b47cc43a1d2, type: 3}
 --- !u!4 &1360215106 stripped
 Transform:
   m_PrefabParentObject: {fileID: 402244, guid: 61f7a8eea3378af40b5c4de69adb514b, type: 2}
@@ -7938,7 +7945,7 @@ Prefab:
     - target: {fileID: 224558052397848558, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 224265823085497418, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -7958,7 +7965,7 @@ Prefab:
     - target: {fileID: 224265823085497418, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -65
       objectReference: {fileID: 0}
     - target: {fileID: 224704686473088810, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -7978,7 +7985,7 @@ Prefab:
     - target: {fileID: 224704686473088810, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -110
       objectReference: {fileID: 0}
     - target: {fileID: 224920181711559044, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -7998,7 +8005,7 @@ Prefab:
     - target: {fileID: 224920181711559044, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -155
       objectReference: {fileID: 0}
     - target: {fileID: 224012996076674374, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -8018,7 +8025,7 @@ Prefab:
     - target: {fileID: 224012996076674374, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 224753700713061362, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -8038,7 +8045,7 @@ Prefab:
     - target: {fileID: 224753700713061362, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -245
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24598a322bbc96a429166d11d5f4fca1, type: 2}
@@ -8657,7 +8664,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1790977825301142, guid: 2f0e6cb1765d09e40a8b1bc8cf66fc5b, type: 2}
       propertyPath: m_Name
-      value: Character (2)
+      value: Guild Leader Character
       objectReference: {fileID: 0}
     - target: {fileID: 4839862646487594, guid: 2f0e6cb1765d09e40a8b1bc8cf66fc5b, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y

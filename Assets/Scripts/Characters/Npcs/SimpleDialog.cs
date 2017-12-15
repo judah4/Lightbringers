@@ -44,7 +44,7 @@ public class SimpleDialog : MonoBehaviour {
             }
             else
             {
-                DialogBox.Instance.ShowText(text);
+                DialogBox.Instance.ShowText(new TextAndAudio() {Text = text});
             }
             
         }
