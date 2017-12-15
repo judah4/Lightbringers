@@ -3,7 +3,7 @@
 	"level": 6,
 	"hp": 70,
 	"mana" :30,
-	"attack" : 20,
+	"attack" : 18,
 	"defense" : 5,
 	"speed" :14,
 	"exp" : 300

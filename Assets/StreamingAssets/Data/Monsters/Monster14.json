@@ -1,11 +1,11 @@
 {
 	"name": "The Lich King",
 	"level": 5,
-	"hp": 70,
+	"hp": 100,
 	"mana" :70,
 	"attack" : 20,
 	"defense" : 5,
 	"speed" :14,
 	"level" : 5,
-	"exp" : 300
+	"exp" : 1500
 }
