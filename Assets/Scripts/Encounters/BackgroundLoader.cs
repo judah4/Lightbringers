@@ -22,6 +22,10 @@ namespace Assets.Scripts.Encounters
             {
                 SceneName = "Cave Battle";
             }
+            else if(World.WorldStateManager.Instance.CurrentScene == "Castle Interior")
+            {
+                SceneName = "CastleBattle";
+            }
 
 
             for (int cnt = 0; cnt < SceneManager.sceneCount; cnt++)

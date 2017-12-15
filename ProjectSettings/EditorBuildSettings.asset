@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BattleScenes/Cave Battle.unity
     guid: e1e7aad772f3e3c41b5bcae62ef3f328
   - enabled: 1
+    path: Assets/Scenes/BattleScenes/CastleBattle.unity
+    guid: b69cae8b8bcc0e243af18bf5c1657899
+  - enabled: 1
     path: Assets/Scenes/Castle Courtyard.unity
     guid: b58024dfb95d1b64ab2bb397a2536353
   - enabled: 1
