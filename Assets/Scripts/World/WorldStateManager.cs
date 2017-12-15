@@ -58,6 +58,26 @@ namespace Assets.Scripts.World
 			SetupCharacters();
 		}
 
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F5))
+            {
+                foreach (var characterStat in CharacterStats)
+                {
+                    characterStat.Level = 5;
+                    characterStat.SetClass(characterStat.CharacterClass);
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.F6))
+            {
+                foreach (var characterStat in CharacterStats)
+                {
+                    characterStat.Level = 10;
+                    characterStat.SetClass(characterStat.CharacterClass);
+                }
+            }
+        }
+
 		void SetupCharacters()
 		{
 			var pos = 0;
