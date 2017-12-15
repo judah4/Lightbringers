@@ -14,6 +14,12 @@ public class VoiceManager : MonoBehaviour
         Instance = this;
     }
 
+    public void TriggerAudio(AudioClip clip)
+    {
+        AudioSource.clip = clip;
+        AudioSource.Play();
+    }
+
     public void TriggerVoice()
     {
         AudioSource.clip = Voices[Random.Range(0, Voices.Count)];

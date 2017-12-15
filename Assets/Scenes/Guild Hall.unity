@@ -7531,7 +7531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Branches:
-  - Id: 1
+  - Id: 10
     CompleteEvent: 1
     Texts:
     - Text: Welcome!
@@ -7540,12 +7540,12 @@ MonoBehaviour:
       Audio: {fileID: 0}
     - Text: Go defeat the slime king in the training cave behind the building
       Audio: {fileID: 8300000, guid: 066f41bc99ad9544e921c126334d1127, type: 3}
-  - Id: 2
+  - Id: 11
     CompleteEvent: 0
     Texts:
     - Text: Go, Im waiting
       Audio: {fileID: 8300000, guid: d75040b855edf674cba462b1954839ec, type: 3}
-  - Id: 3
+  - Id: 100
     CompleteEvent: 1
     Texts:
     - Text: Good job! you are now offically guild members!
@@ -7553,7 +7553,7 @@ MonoBehaviour:
     - Text: A new mission just came in. The king wants you to investigate a dragon
         near the castle town.
       Audio: {fileID: 8300000, guid: f0de1c31c4f8aed45b130565151180ad, type: 3}
-  - Id: 4
+  - Id: 101
     CompleteEvent: 0
     Texts:
     - Text: Good luck!
@@ -7945,7 +7945,7 @@ Prefab:
     - target: {fileID: 224558052397848558, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224265823085497418, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -7965,7 +7965,7 @@ Prefab:
     - target: {fileID: 224265823085497418, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224704686473088810, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -7985,7 +7985,7 @@ Prefab:
     - target: {fileID: 224704686473088810, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -110
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224920181711559044, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -8005,7 +8005,7 @@ Prefab:
     - target: {fileID: 224920181711559044, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -155
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224012996076674374, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -8025,7 +8025,7 @@ Prefab:
     - target: {fileID: 224012996076674374, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224753700713061362, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
@@ -8045,7 +8045,7 @@ Prefab:
     - target: {fileID: 224753700713061362, guid: 24598a322bbc96a429166d11d5f4fca1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -245
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24598a322bbc96a429166d11d5f4fca1, type: 2}
