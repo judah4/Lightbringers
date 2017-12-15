@@ -14,5 +14,6 @@ public class DialogBranch
 {
 
     public int Id = 0;
+    public bool CompleteEvent;
     public List<string> Texts;
 }

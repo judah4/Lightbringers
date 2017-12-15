@@ -7532,19 +7532,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Branches:
   - Id: 1
+    CompleteEvent: 1
     Texts:
     - Welcome!
     - Fresh Adveturers huh? Well, show me what you can do.
     - Go defeat the slime king in the training cave behind the building
   - Id: 2
+    CompleteEvent: 0
     Texts:
     - Go, I'm wiating
   - Id: 3
+    CompleteEvent: 1
     Texts:
     - Good job! you are now offically guild members!
     - A new mission just came in. The king wants you to investigate a dragon near
       the castle town.
   - Id: 4
+    CompleteEvent: 0
     Texts:
     - Good luck!
 --- !u!4 &1360215106 stripped

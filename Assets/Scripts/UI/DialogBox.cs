@@ -84,7 +84,7 @@ public class DialogBox : MonoBehaviour {
             break;
         }
 
-        if (DialogTree.Branches[dialogIndex].Id != 0)
+        if (DialogTree.Branches[dialogIndex].CompleteEvent)
         {
             WorldStateManager.Instance.Events.Add(DialogTree.Branches[dialogIndex].Id);
         }
