@@ -27,7 +27,8 @@ namespace Assets.Scripts.World
 
 		public List<int> MonsterIds = new List<int>();
         public int EncounterId = 1;
-        
+        public List<int> Events = new List<int>();
+
         public void SetPosition(Vector3 position)
         {
             Position = position;

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.World;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +25,10 @@ public class DialogBox : MonoBehaviour {
     private string _text;
     private int _showSize = -1;
 
+    public DialogTree DialogTree;
+    public int dialogId = 0;
+    public int dialogIndex = 0;
+    public int dialogTextIndex = 0;
 	// Use this for initialization
 	void Start () {
 		TextUI.text = "";
@@ -35,6 +40,15 @@ public class DialogBox : MonoBehaviour {
         {
             if(_showSize == -1)
             {
+                if (DialogTree != null)
+                {
+                    dialogTextIndex++;
+                    if (dialogTextIndex < DialogTree.Branches[dialogIndex].Texts.Count)
+                    {
+                        ShowText(DialogTree.Branches[dialogIndex].Texts[dialogTextIndex]);
+                        return;
+                    }
+                }
                 //done
                 Destroy(gameObject);
             }
@@ -52,6 +66,32 @@ public class DialogBox : MonoBehaviour {
         _showSize = 1;
         StopAllCoroutines();
         StartCoroutine(RunShowing());
+    }
+
+    public void ShowText(DialogTree dialogTree)
+    {
+        DialogTree = dialogTree;
+
+        for (int cnt = 0; cnt < DialogTree.Branches.Count; cnt++)
+        {
+            if (WorldStateManager.Instance.Events.Contains(DialogTree.Branches[cnt].Id))
+            {
+                continue;
+            }
+
+            dialogId = DialogTree.Branches[cnt].Id;
+            dialogIndex = cnt;
+            break;
+        }
+
+        if (DialogTree.Branches[dialogIndex].Id != 0)
+        {
+            WorldStateManager.Instance.Events.Add(DialogTree.Branches[dialogIndex].Id);
+        }
+
+        dialogTextIndex = 0;
+        ShowText(DialogTree.Branches[dialogIndex].Texts[dialogTextIndex]);
+
     }
 
     public void FullShow()

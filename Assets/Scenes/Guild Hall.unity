@@ -7514,6 +7514,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0099999, y: 1.0200502, z: 1.01}
   m_Center: {x: 0, y: 0.5100251, z: -0.000000029802322}
+--- !u!1 &1357154185 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1790977825301142, guid: 2f0e6cb1765d09e40a8b1bc8cf66fc5b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1477873747}
+--- !u!114 &1357154186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357154185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e333bbd9b615e8f4f9ae9fa2692f826e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Branches:
+  - Id: 1
+    Texts:
+    - Welcome!
+    - Fresh Adveturers huh? Well, show me what you can do.
+    - Go defeat the slime king in the training cave behind the building
+  - Id: 2
+    Texts:
+    - Go, I'm wiating
+  - Id: 3
+    Texts:
+    - Good job! you are now offically guild members!
+    - A new mission just came in. The king wants you to investigate a dragon near
+      the castle town.
+  - Id: 4
+    Texts:
+    - Good luck!
 --- !u!4 &1360215106 stripped
 Transform:
   m_PrefabParentObject: {fileID: 402244, guid: 61f7a8eea3378af40b5c4de69adb514b, type: 2}
@@ -8659,6 +8692,11 @@ Prefab:
       propertyPath: m_Center.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114679236379347018, guid: 2f0e6cb1765d09e40a8b1bc8cf66fc5b,
+        type: 2}
+      propertyPath: DialogTree
+      value: 
+      objectReference: {fileID: 1357154186}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f0e6cb1765d09e40a8b1bc8cf66fc5b, type: 2}
   m_IsPrefabParent: 0

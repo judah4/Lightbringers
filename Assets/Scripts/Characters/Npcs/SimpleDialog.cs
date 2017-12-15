@@ -12,6 +12,8 @@ public class SimpleDialog : MonoBehaviour {
     [SerializeField]
     private float timer = -1;
 
+    public DialogTree DialogTree;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -36,6 +38,14 @@ public class SimpleDialog : MonoBehaviour {
 
 		if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0))
         {
+            if (DialogTree != null)
+            {
+                DialogBox.Instance.ShowText(DialogTree);
+            }
+            else
+            {
+                
+            }
             DialogBox.Instance.ShowText(text);
         }
 	}
