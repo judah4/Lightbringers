@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BattleScenes/CastleBattle.unity
     guid: b69cae8b8bcc0e243af18bf5c1657899
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Castle Courtyard.unity
     guid: b58024dfb95d1b64ab2bb397a2536353
   - enabled: 1
@@ -50,3 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrimaFaya City.unity
     guid: e5163f4fb0c66f749a02f6d68dd4323c
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 27592c387d0ba7d46931a9ff300ef610
