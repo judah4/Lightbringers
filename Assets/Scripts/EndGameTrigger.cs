@@ -15,7 +15,7 @@ public class EndGameTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
         {
             var chControl = other.gameObject.GetComponent<CharacterController>();
-            if (WorldStateManager.Instance.Events.Contains(500))
+            if (WorldStateManager.Instance.MonsterIds.Contains(500))
             {
                 
                 SceneManager.LoadScene("WinScene");
