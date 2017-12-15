@@ -171,4 +171,48 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
     Hurts:
     - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
+  - Attacks:
+    - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
+    Deaths:
+    - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
+    Hurts:
+    - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
+  - Attacks:
+    - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
+    Deaths:
+    - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
+    Hurts:
+    - {fileID: 8300000, guid: 5682f72602e1f6f47802da977bf7d05d, type: 3}
+  - Attacks:
+    - {fileID: 8300000, guid: be0a56f225bc18347b2bbc370aa8f5e8, type: 3}
+    - {fileID: 8300000, guid: 41253b050b4444645ae202131f903dcc, type: 3}
+    - {fileID: 8300000, guid: 0b63c2bb132e9864e985c855c64fe476, type: 3}
+    - {fileID: 8300000, guid: 6784afe91c851974cb1d2a5a45c032b1, type: 3}
+    Deaths:
+    - {fileID: 8300000, guid: 6784afe91c851974cb1d2a5a45c032b1, type: 3}
+    - {fileID: 8300000, guid: 77c6da1718eaefc4bb1c2d1a26fb0294, type: 3}
+    - {fileID: 8300000, guid: 78e00d31f9ff1394f9a7f954ca155f2e, type: 3}
+    - {fileID: 8300000, guid: 0b63c2bb132e9864e985c855c64fe476, type: 3}
+    Hurts:
+    - {fileID: 8300000, guid: 32fbe4b25ba719e46b9ce816788136ad, type: 3}
+    - {fileID: 8300000, guid: ba165ef967e619243b967b4bba916663, type: 3}
+    - {fileID: 8300000, guid: 3ba954c1ad244ae43bbe03a0583a855c, type: 3}
+    - {fileID: 8300000, guid: 5985f8052058088438b23ebcbac12d82, type: 3}
+    - {fileID: 8300000, guid: 41253b050b4444645ae202131f903dcc, type: 3}
+  - Attacks:
+    - {fileID: 8300000, guid: be0a56f225bc18347b2bbc370aa8f5e8, type: 3}
+    - {fileID: 8300000, guid: 41253b050b4444645ae202131f903dcc, type: 3}
+    - {fileID: 8300000, guid: 0b63c2bb132e9864e985c855c64fe476, type: 3}
+    - {fileID: 8300000, guid: 6784afe91c851974cb1d2a5a45c032b1, type: 3}
+    Deaths:
+    - {fileID: 8300000, guid: 6784afe91c851974cb1d2a5a45c032b1, type: 3}
+    - {fileID: 8300000, guid: 77c6da1718eaefc4bb1c2d1a26fb0294, type: 3}
+    - {fileID: 8300000, guid: 78e00d31f9ff1394f9a7f954ca155f2e, type: 3}
+    - {fileID: 8300000, guid: 0b63c2bb132e9864e985c855c64fe476, type: 3}
+    Hurts:
+    - {fileID: 8300000, guid: 32fbe4b25ba719e46b9ce816788136ad, type: 3}
+    - {fileID: 8300000, guid: ba165ef967e619243b967b4bba916663, type: 3}
+    - {fileID: 8300000, guid: 3ba954c1ad244ae43bbe03a0583a855c, type: 3}
+    - {fileID: 8300000, guid: 5985f8052058088438b23ebcbac12d82, type: 3}
+    - {fileID: 8300000, guid: 41253b050b4444645ae202131f903dcc, type: 3}
   AudioSource: {fileID: 82054529140704350}

@@ -7537,7 +7537,7 @@ MonoBehaviour:
     - Text: Welcome!
       Audio: {fileID: 8300000, guid: 5c21cc963577df94682ae1afcd63c1f1, type: 3}
     - Text: Fresh Adveturers huh? Well, show me what you can do.
-      Audio: {fileID: 0}
+      Audio: {fileID: 8300000, guid: 5d55d1ed3b29b64479794df0825a338e, type: 3}
     - Text: Go defeat the slime king in the training cave behind the building
       Audio: {fileID: 8300000, guid: 066f41bc99ad9544e921c126334d1127, type: 3}
   - Id: 11
